@@ -1,0 +1,125 @@
+═══════════════════════════════════════════════════════════
+  📋 COMANDOS PARA DEPLOY - COPIE E COLE NO TERMINAL
+═══════════════════════════════════════════════════════════
+
+ATENÇÃO: Substitua as variáveis antes de executar!
+- SEU-USUARIO     → seu username do GitHub
+- NOME-REPO       → nome do repositório criado
+
+═══════════════════════════════════════════════════════════
+  PASSO 1: INICIALIZAR GIT (se ainda não fez)
+═══════════════════════════════════════════════════════════
+
+git init
+git add .
+git commit -m "Initial commit - Portfolio"
+git branch -M main
+
+═══════════════════════════════════════════════════════════
+  PASSO 2: CONECTAR AO GITHUB
+═══════════════════════════════════════════════════════════
+
+OPÇÃO A - Repo tipo: usuario.github.io
+--------------------------------------------------
+git remote add origin https://github.com/SEU-USUARIO/SEU-USUARIO.github.io.git
+git push -u origin main
+
+Exemplo real:
+git remote add origin https://github.com/williancardoso/williancardoso.github.io.git
+git push -u origin main
+
+
+OPÇÃO B - Repo com outro nome (ex: portfolio)
+--------------------------------------------------
+git remote add origin https://github.com/SEU-USUARIO/NOME-REPO.git
+git push -u origin main
+
+Exemplo real:
+git remote add origin https://github.com/williancardoso/portfolio.git
+git push -u origin main
+
+═══════════════════════════════════════════════════════════
+  IMPORTANTE SE ESCOLHEU OPÇÃO B
+═══════════════════════════════════════════════════════════
+
+1. Abra: next.config.ts
+2. Descomente e ajuste:
+   basePath: "/NOME-REPO",
+
+Exemplo:
+   basePath: "/portfolio",
+
+3. Salve e commite:
+git add next.config.ts
+git commit -m "Configure basePath for GitHub Pages"
+git push
+
+═══════════════════════════════════════════════════════════
+  COMANDOS ÚTEIS - DEPOIS DO PRIMEIRO DEPLOY
+═══════════════════════════════════════════════════════════
+
+# Ver status do Git
+git status
+
+# Adicionar todas as alterações
+git add .
+
+# Criar commit
+git commit -m "Descrição das mudanças"
+
+# Enviar para GitHub (deploy automático)
+git push
+
+# Ver histórico de commits
+git log --oneline -10
+
+# Desfazer última alteração (antes do commit)
+git checkout .
+
+# Ver arquivos modificados
+git diff
+
+═══════════════════════════════════════════════════════════
+  TESTAR ANTES DE FAZER DEPLOY
+═══════════════════════════════════════════════════════════
+
+# Rodar localmente
+npm run dev
+
+# Testar build de produção
+npm run build
+
+# Limpar cache e rebuildar
+rm -rf .next out
+npm run build
+
+═══════════════════════════════════════════════════════════
+  VERIFICAR CONFIGURAÇÃO
+═══════════════════════════════════════════════════════════
+
+# Ver se Git está conectado
+git remote -v
+
+# Ver qual branch está ativa
+git branch
+
+# Ver último commit
+git log -1
+
+═══════════════════════════════════════════════════════════
+  LINKS ÚTEIS
+═══════════════════════════════════════════════════════════
+
+Seu repositório:
+https://github.com/SEU-USUARIO/NOME-REPO
+
+Actions (ver deploys):
+https://github.com/SEU-USUARIO/NOME-REPO/actions
+
+Settings (configurar):
+https://github.com/SEU-USUARIO/NOME-REPO/settings/pages
+
+═══════════════════════════════════════════════════════════
+
+Dúvidas? Leia: DEPLOY-GITHUB-PAGES.md
+Deploy rápido? Leia: DEPLOY-RAPIDO.md
