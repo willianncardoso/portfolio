@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
    * E o site for servido em: seu-usuario.github.io/NOME-REPO/
    * Descomente a linha abaixo e ajuste:
    */
-  // basePath: "/NOME-DO-REPO",
+  basePath: "/portfolio",
 
   /**
    * IMAGES
