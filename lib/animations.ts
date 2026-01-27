@@ -34,10 +34,10 @@ import type { Variant } from "framer-motion";
  */
 
 /** Duração padrão das animações (em segundos) */
-export const ANIMATION_DURATION = 0.5;
+export const ANIMATION_DURATION = 0.3;
 
 /** Delay entre animações em sequência (stagger) */
-export const STAGGER_DELAY = 0.1;
+export const STAGGER_DELAY = 0.05;
 
 /** Curva de easing (aceleração) padrão */
 export const DEFAULT_EASE = "easeOut" as const;

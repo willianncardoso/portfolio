@@ -21,9 +21,8 @@ const nextConfig: NextConfig = {
 
   /**
    * BASE PATH
-   * Se seu repositório for: github.com/SEU-USUARIO/NOME-REPO
-   * E o site for servido em: seu-usuario.github.io/NOME-REPO/
-   * Descomente a linha abaixo e ajuste:
+   * IMPORTANTE: Comentado para desenvolvimento local
+   * Descomente antes do deploy para GitHub Pages
    */
   basePath: "/portfolio",
 

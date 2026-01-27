@@ -28,7 +28,8 @@ export function CasesGridSection() {
         >
           {featuredCases.map((caseItem) => (
             <motion.div key={caseItem.id} {...staggerItem}>
-              <Card hover padding="none" className="overflow-hidden group">
+              <Link href={`/cases/${caseItem.id}`} className="block">
+                <Card hover padding="none" className="overflow-hidden group">
                 {/* Imagem do case com gradient overlay */}
                 <div className="relative aspect-[16/10] bg-gradient-to-br from-primary-100 to-primary-50 overflow-hidden">
                   <Image
@@ -57,6 +58,7 @@ export function CasesGridSection() {
                   <p className="text-primary-600">{caseItem.cardDescription}</p>
                 </div>
               </Card>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
