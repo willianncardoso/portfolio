@@ -28,26 +28,35 @@ export function CasesGridSection() {
         >
           {featuredCases.map((caseItem) => (
             <motion.div key={caseItem.id} {...staggerItem}>
-              <Link href={`/cases/${caseItem.id}`}>
-                <Card hover padding="none" className="overflow-hidden group">
-                  <div className="relative aspect-[16/10] bg-primary-100">
-                    {/* Placeholder para imagem */}
-                    <div className="w-full h-full flex items-center justify-center text-primary-400">
-                      Image: {caseItem.title}
-                    </div>
+              <Card hover padding="none" className="overflow-hidden group">
+                {/* Imagem do case com gradient overlay */}
+                <div className="relative aspect-[16/10] bg-gradient-to-br from-primary-100 to-primary-50 overflow-hidden">
+                  <Image
+                    src={caseItem.images.cover}
+                    alt={caseItem.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  {/* Overlay escuro para melhor legibilidade */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+                  {/* Badge de categoria sobre a imagem */}
+                  <div className="absolute top-4 left-4">
+                    <Badge size="sm" variant="secondary" className="bg-white/90 backdrop-blur-sm">
+                      {caseItem.category}
+                    </Badge>
                   </div>
-                  <div className="p-6">
-                    <Badge size="sm" className="mb-3">{caseItem.category}</Badge>
-                    <h3 className="text-xl font-bold text-primary-900 mb-2 group-hover:text-accent-500 transition-colors">
-                      {caseItem.title}
-                    </h3>
-                    <p className="text-primary-600">{caseItem.cardDescription}</p>
-                    <div className="mt-4 flex items-center text-accent-500 font-medium">
-                      View case study <ArrowRight className="ml-2" size={16} />
-                    </div>
-                  </div>
-                </Card>
-              </Link>
+                </div>
+
+                {/* Conteúdo do card */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary-900 mb-2 group-hover:text-accent-500 transition-colors">
+                    {caseItem.title}
+                  </h3>
+                  <p className="text-primary-600">{caseItem.cardDescription}</p>
+                </div>
+              </Card>
             </motion.div>
           ))}
         </motion.div>
