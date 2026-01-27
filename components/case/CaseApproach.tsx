@@ -41,7 +41,6 @@ export function CaseApproach({ steps }: CaseApproachProps) {
 
         <motion.div {...staggerContainer} className="relative mt-12 space-y-16">
           {steps.map((step, index) => {
-            const isEven = index % 2 === 0;
 
             return (
               <motion.div

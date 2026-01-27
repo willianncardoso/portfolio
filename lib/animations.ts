@@ -25,7 +25,7 @@
  * - viewport: Quando a animação é ativada
  */
 
-import type { Variant } from "framer-motion";
+// Animations library for Framer Motion
 
 /**
  * ============================================
