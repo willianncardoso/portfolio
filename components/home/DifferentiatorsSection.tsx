@@ -27,7 +27,8 @@ export function DifferentiatorsSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
         >
           {homeContent.differentiators.items.map((item, index) => {
-            const IconComponent = (Icons as Record<string, React.ComponentType<{ className?: string; size?: number }>>)[item.icon] || Icons.Box;
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const IconComponent = (Icons as any)[item.icon] || Icons.Box;
             
             return (
               <motion.div key={index} {...staggerItem}>
