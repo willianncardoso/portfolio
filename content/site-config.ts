@@ -24,7 +24,7 @@ export const siteConfig = {
   name: "Willian Cardoso",
 
   /** Seu título profissional - aparece logo abaixo do nome */
-  title: "Senior Product Designer",
+  title: "Lead Product Designer",
 
   /** Sua localização atual */
   location: "São Paulo, Brazil",
@@ -33,7 +33,7 @@ export const siteConfig = {
   email: "willian.cardoso@icloud.com",
 
   /** Breve descrição profissional (1-2 linhas) */
-  bio: "8 years at IBM designing enterprise SaaS products, design systems, and B2B applications. I code (Python, JS, Vue) and think in systems.",
+  bio: "7+ years at IBM designing B2B SaaS products, design systems, and data-heavy dashboards. I code in Python, read JavaScript/Vue fluently, and think in systems.",
 
   // ============================================
   // REDES SOCIAIS E LINKS EXTERNOS
@@ -64,14 +64,14 @@ export const siteConfig = {
 
   seo: {
     /** Título que aparece na aba do navegador e no Google */
-    title: "Willian Cardoso — Senior Product Designer",
+    title: "Willian Cardoso — Lead Product Designer",
 
     /** Descrição para motores de busca e compartilhamentos
      * Máximo recomendado: 155 caracteres
      * Seja específico e use palavras-chave relevantes
      */
     description:
-      "Senior Product Designer with 8 years at IBM. Specializing in enterprise SaaS, design systems, and B2B applications. Open to remote opportunities.",
+      "Lead Product Designer with 7+ years at IBM. Specializing in enterprise SaaS, design systems, and complex B2B applications. Engineering background, Python skills, neuroscience lens.",
 
     /** URL do seu site (quando tiver domínio próprio)
      * Durante desenvolvimento local, pode deixar como localhost
@@ -103,7 +103,7 @@ export const siteConfig = {
     /** Texto do badge de disponibilidade
      * Seja específico sobre tipo de trabalho e localização
      */
-    badgeText: "Open to remote roles — UK, US, Germany, Portugal, NL",
+    badgeText: "Open to remote roles — US, UK, Germany, Portugal, NL | Also open to CLT in Brazil",
 
     /** Status detalhado (opcional - aparece na página About) */
     statusDetails:

@@ -20,8 +20,8 @@ export const cortexCase: CaseStudy = {
   },
 
   images: {
-    cover: "/images/cases/cortex/cover.png",
-    hero: "/images/cases/cortex/hero.png",
+    cover: "/images/cases/cortex/cover.svg",
+    hero: "/images/cases/cortex/Cortex - design.png",
     heroAlt: "Cortex S360 dashboard interface",
   },
 

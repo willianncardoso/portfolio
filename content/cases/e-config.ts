@@ -21,8 +21,8 @@ export const econfigCase: CaseStudy = {
   },
 
   images: {
-    cover: "/images/cases/econfig/cover.png",
-    hero: "/images/cases/econfig/hero.png",
+    cover: "/images/cases/econfig/cover.svg",
+    hero: "/images/cases/econfig/e-config - design.png",
     heroAlt: "E-Config wizard interface",
   },
 

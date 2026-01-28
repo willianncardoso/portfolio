@@ -43,8 +43,8 @@ export const eswCase: CaseStudy = {
   // ============================================
 
   images: {
-    cover: "/images/cases/esw/cover.png",
-    hero: "/images/cases/esw/hero.png",
+    cover: "/images/cases/esw/cover.svg",
+    hero: "/images/cases/esw/ESW zPricer - Highlights.png",
     heroAlt: "ESW platform interface showing the redesigned configuration flow",
   },
 
@@ -88,7 +88,7 @@ export const eswCase: CaseStudy = {
         "No visual hierarchy — everything looked equally important",
         "Training new sales reps took 3+ weeks",
       ],
-      image: "/images/cases/esw/problem.png",
+      image: "/images/cases/esw/p1 - brackground project 1.png",
       imageAlt: "Old ESW interface showing complexity",
     },
 
@@ -98,7 +98,7 @@ export const eswCase: CaseStudy = {
         title: "Understanding the users",
         description:
           "I shadowed 8 sales representatives across 3 regions (US, Brazil, Germany) to understand their real workflows — not the documented ones, but how they actually got things done.",
-        image: "/images/cases/esw/research.png",
+      image: "/images/cases/esw/p1 - oportunity project 1.png",
         imageAlt: "Affinity mapping from user interviews",
         imageCaption: "Affinity mapping from user interviews",
       },
@@ -106,7 +106,7 @@ export const eswCase: CaseStudy = {
         title: "Mapping the complexity",
         description:
           "I created a comprehensive flow diagram of the entire configuration process, identifying redundant steps, decision points, and error-prone areas.",
-        image: "/images/cases/esw/flow.png",
+        image: "/images/cases/esw/p1 - process.png",
         imageAlt: "Configuration flow diagram",
         imageCaption: "Mapping the 47-step configuration process",
       },
@@ -114,7 +114,7 @@ export const eswCase: CaseStudy = {
         title: "Iterative design",
         description:
           "Rather than a big-bang redesign, I proposed incremental improvements that could be tested and deployed quickly. Each sprint delivered measurable value.",
-        image: "/images/cases/esw/iterations.png",
+        image: "/images/cases/esw/p1 - process 2.png",
         imageAlt: "Design iterations from wireframes to final UI",
         imageCaption: "Evolution from wireframes to final UI",
       },
@@ -129,25 +129,25 @@ export const eswCase: CaseStudy = {
           title: "Simplified flow",
           description:
             "Reduced configuration from 47 steps to 12 by eliminating redundancies and using smart defaults based on client history.",
-          image: "/images/cases/esw/new-flow.png",
+          image: "/images/cases/esw/p1 - highlights and solution 1.png",
           imageAlt: "Simplified 12-step flow",
         },
         {
           title: "Real-time validation",
           description:
             "Instead of showing errors at the end, the system now validates each step in real-time with clear, actionable messages.",
-          image: "/images/cases/esw/validation.png",
+          image: "/images/cases/esw/p1 - highlights and solution 2.png",
           imageAlt: "Real-time validation interface",
         },
         {
           title: "Component library",
           description:
             "Created a shared component library that reduced design-dev handoff time by 60% and ensured consistency across the platform.",
-          image: "/images/cases/esw/components.png",
+          image: "/images/cases/esw/ESW zPricer - Highlights.png",
           imageAlt: "Design system components",
         },
       ],
-      mainImage: "/images/cases/esw/final-ui.png",
+      mainImage: "/images/cases/esw/ESW zPricer - Highlights.png",
       mainImageAlt: "The redesigned configuration interface",
       mainImageCaption: "The redesigned configuration interface",
     },

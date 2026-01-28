@@ -22,17 +22,17 @@ export const aboutContent = {
 
   hero: {
     /** Título principal da página */
-    title: "Designing at the intersection of research, code, and systems thinking",
+    title: "Lead Product Designer with 7+ years at IBM, an engineering background, and an unusual path into design.",
 
     /** Subtítulo/descrição (2-3 linhas) */
     description:
-      "I'm a product designer who doesn't just design — I code, research, and think in systems. My background in neuroscience and data analytics gives me a unique lens on how people interact with complex software.",
+      "I make complex enterprise software feel simple. I didn't start in design — I started in science.",
 
     /** Caminho da imagem (foto maior, mais elaborada que a da home) */
-    image: "/images/profile-large.jpg",
+    image: "/images/IMG_4252 Medium.jpeg",
 
     /** Alt text da imagem */
-    imageAlt: "Willian Cardoso - Senior Product Designer",
+    imageAlt: "Willian Cardoso - Lead Product Designer",
   },
 
   // ============================================
@@ -42,17 +42,17 @@ export const aboutContent = {
 
   story: {
     /** Título da seção */
-    sectionTitle: "My Journey",
+    sectionTitle: "The Longer Version",
 
     /** Parágrafos contando sua história
      * Seja pessoal, mas profissional
      * Mostre evolução, não só fatos
      */
     paragraphs: [
-      "I didn't start as a designer. My academic path took me through neuroscience, aerospace engineering, and data analytics. Each detour taught me something valuable: how to think systematically, how to work with complex data, and how to ask the right questions.",
-      "When I joined IBM Brasil in 2017, I found the perfect intersection of these interests. Enterprise software needs designers who can handle complexity — not just visual complexity, but conceptual and technical complexity. I thrived in that environment.",
-      "Over 8 years, I evolved from UX/UI Designer to Service Designer to Senior Product Designer. I worked on everything from customer-facing configuration tools to internal operational dashboards. The common thread? Making complex systems feel intuitive.",
-      "What makes me different is that I don't stop at Figma. I code prototypes, I dig into technical constraints, I facilitate cross-functional workshops. I speak the language of engineers, PMs, and users equally well.",
+      "At UFABC, I studied Science & Technology, then moved into Aerospace Engineering — including an exchange year at University of Strathclyde in Scotland. My first role at IBM was actually as a developer intern, building features in JavaScript/Vue and working with MongoDB.",
+      "That technical foundation changed how I approach design. I understand engineering constraints because I've lived them. I can read a codebase, prototype with real data, and have meaningful conversations with developers without a translator.",
+      "Over 7 years at IBM, I progressed from UX/UI Designer to Senior Product Designer to Service Designer — always focused on enterprise tools that thousands of people rely on daily. Configuration systems, operational dashboards, internal platforms built from scratch.",
+      "I'm not done learning. Currently, I'm pursuing a Neuroscience degree (UFABC) — because I want to understand user behavior at a deeper level, not just observe it. I'm completing a post-grad in Data Analytics (FIAP) — to back design decisions with real metrics. And I'm researching Computational Neuroscience — applying NLP and neural networks to preserve indigenous languages.",
     ],
   },
 
@@ -135,13 +135,13 @@ export const aboutContent = {
     items: [
       {
         /** Cargo/posição */
-        role: "Senior Product Designer",
+        role: "Lead Product Designer",
 
         /** Empresa */
         company: "IBM Brasil",
 
         /** Período (texto livre) */
-        period: "2022 - 2024",
+        period: "2023 - 2024",
 
         /** Descrição e achievements (array de strings) */
         description: [
@@ -155,9 +155,9 @@ export const aboutContent = {
         location: "São Paulo, Brazil (Remote)",
       },
       {
-        role: "Service Designer",
+        role: "Senior Product Designer",
         company: "IBM Brasil",
-        period: "2020 - 2022",
+        period: "2020 - 2023",
         description: [
           "Designed end-to-end service experiences for IBM's enterprise clients, mapping complex user journeys across multiple touchpoints.",
           "Led discovery workshops with stakeholders to identify pain points and opportunities.",
@@ -218,11 +218,11 @@ export const aboutContent = {
       },
       {
         degree: "Exchange Program - Science & Technology",
-        institution: "University of Edinburgh",
+        institution: "University of Strathclyde",
         period: "2018",
         description:
-          "One-semester exchange program focusing on human-computer interaction and cognitive ergonomics.",
-        location: "Edinburgh, Scotland",
+          "One-year exchange program focusing on engineering and systems design.",
+        location: "Glasgow, Scotland",
       },
       {
         degree: "Coursework in Aerospace Engineering",
@@ -241,14 +241,12 @@ export const aboutContent = {
 
   currently: {
     /** Título da seção */
-    sectionTitle: "Currently",
+    sectionTitle: "What I'm Looking For",
 
     /** O que você está fazendo/aprendendo agora */
     activities: [
-      "🔍 Seeking remote opportunities with product teams that value design-engineering collaboration",
-      "📚 Deepening my frontend development skills (React, TypeScript, Next.js)",
-      "🧠 Finishing my bachelor's thesis in neuroscience on decision-making patterns",
-      "🌍 Open to relocating to: UK, US, Germany, Portugal, or Netherlands",
+      "I'm open to remote opportunities with international teams (US, UK, Germany, Portugal, Netherlands) as well as well-structured CLT positions in Brazil.",
+      "I thrive in async-first environments, overlap comfortably with US East and EU timezones (GMT-3), and bring the rigor of enterprise design to fast-moving product teams.",
     ],
 
     /** Call to action */
@@ -264,29 +262,29 @@ export const aboutContent = {
 
   values: {
     /** Título da seção */
-    sectionTitle: "How I Work",
+    sectionTitle: "What Makes Me Different",
 
     /** Lista de valores/princípios */
     items: [
       {
-        title: "Systems over pixels",
+        title: "Engineering roots",
         description:
-          "Great design isn't just beautiful screens — it's coherent systems that scale.",
+          "Science & Technology degree, almost-completed Aerospace Engineering, started as a dev. I think like an engineer and design like a human.",
       },
       {
-        title: "Outcomes over outputs",
+        title: "Python + Data",
         description:
-          "I measure success by user and business impact, not number of mockups delivered.",
+          "I prototype with real data, automate repetitive tasks, and validate with metrics. Not just pixels.",
       },
       {
-        title: "Collaboration over ego",
+        title: "Neuroscience lens",
         description:
-          "The best ideas come from diverse perspectives. I facilitate, not dictate.",
+          "A scientific approach to how users perceive, decide, and act. Research-backed, not assumption-based.",
       },
       {
-        title: "Pragmatism over perfection",
+        title: "Global experience",
         description:
-          "Ship iteratively. Learn from real users. Perfect is the enemy of done.",
+          "Exchange year in Scotland, 7 years collaborating with international teams across US, LATAM, and Europe.",
       },
     ],
   },

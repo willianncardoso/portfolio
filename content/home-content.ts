@@ -37,7 +37,7 @@ export const homeContent = {
      * - Diferencial único
      */
     description:
-      "8 years at IBM designing B2B SaaS products, design systems, and data-heavy dashboards. I code (Python, JS, Vue) and think in systems.",
+      "7+ years at IBM designing B2B SaaS products, design systems, and data-heavy dashboards. I code in Python, read JavaScript/Vue fluently, and think in systems.",
 
     /** Texto do botão principal (leva para seção de cases) */
     primaryCTA: "View Work",
@@ -71,25 +71,25 @@ export const homeContent = {
       {
         title: "Enterprise SaaS Expertise",
         description:
-          "Configuration tools, operational dashboards, complex multi-step workflows. 8 years solving problems at IBM scale.",
+          "Configuration tools, operational dashboards, complex multi-step workflows. 7+ years solving problems at IBM scale — from legacy system modernization to 0→1 products.",
         icon: "Building2",
       },
       {
-        title: "Design-to-Code",
+        title: "Design-to-Code Bridge",
         description:
-          "I prototype in code, speak engineering, and understand technical constraints. Python, JavaScript, Vue.",
+          "I prototype in Python, read JavaScript/Vue codebases, and understand technical constraints firsthand. Started my career as a dev intern — I speak fluent engineer.",
         icon: "Code2",
       },
       {
-        title: "Research Depth",
+        title: "Research & Neuroscience Lens",
         description:
-          "Neuroscience background + data analytics training. I understand both user behavior and business metrics.",
+          "Currently pursuing a Neuroscience degree and post-grad in Data Analytics. I don't just observe user behavior — I study how the brain actually makes decisions. Active researcher in Computational Neuroscience, applying NLP to preserve indigenous languages.",
         icon: "Brain",
       },
       {
         title: "Global Collaboration",
         description:
-          "Worked with distributed teams across US, LATAM, and Europe. Fluent in async communication.",
+          "Worked with distributed teams across US, LATAM, and Europe. Fluent in async communication, Agile workflows, and cross-timezone alignment. Exchange year at University of Strathclyde (Scotland) — comfortable in international environments.",
         icon: "Globe",
       },
     ],
@@ -140,7 +140,7 @@ export const homeContent = {
      * Recomendado: 2-3 parágrafos curtos
      */
     paragraphs: [
-      "I spent 8 years at IBM Brasil designing enterprise software — from complex configuration tools to operational dashboards. My background in neuroscience and data analytics helps me understand both user behavior and business metrics.",
+      "I spent 7+ years at IBM designing enterprise software — from complex configuration tools to operational dashboards. My background in neuroscience and data analytics helps me understand both user behavior and business metrics.",
       "I'm not just a pixel-pusher. I code, I facilitate workshops, I translate between design and engineering. I'm looking for a team that values this interdisciplinary approach.",
     ],
 
@@ -150,7 +150,7 @@ export const homeContent = {
     /** Caminho da imagem de preview (opcional)
      * Deixe vazio "" se não quiser mostrar imagem
      */
-    image: "/images/profile.jpg",
+    image: "/images/IMG_4252 Medium.jpeg",
 
     /** Alt text da imagem (importante para acessibilidade) */
     imageAlt: "Willian Cardoso working on design",
@@ -170,7 +170,7 @@ export const homeContent = {
 
     /** Descrição (1-2 linhas) */
     description:
-      "I'm currently open to remote opportunities. Feel free to reach out via email or LinkedIn.",
+      "I'm currently open to remote opportunities with international teams, as well as CLT positions in Brazil. Feel free to reach out.",
 
     /** Texto do botão de email */
     emailButtonText: "Email Me",

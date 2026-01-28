@@ -22,8 +22,8 @@ export const iguaCase: CaseStudy = {
   },
 
   images: {
-    cover: "/images/cases/igua/cover.png",
-    hero: "/images/cases/igua/hero.png",
+    cover: "/images/cases/igua/cover.svg",
+    hero: "/images/cases/igua/Iguá - design.png",
     heroAlt: "Iguá customer service journey map",
   },
 
