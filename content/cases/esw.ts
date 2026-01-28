@@ -43,7 +43,7 @@ export const eswCase: CaseStudy = {
   // ============================================
 
   images: {
-    cover: "/images/cases/esw/cover.svg",
+    cover: "/images/p1 - ESW thumb.png",
     hero: "/images/cases/esw/ESW zPricer - Highlights.png",
     heroAlt: "ESW platform interface showing the redesigned configuration flow",
   },
