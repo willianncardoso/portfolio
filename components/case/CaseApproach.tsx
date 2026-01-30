@@ -18,10 +18,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { ImageWithLightbox } from "@/components/ui/ImageWithLightbox";
 import { CaseApproachStep } from "@/types";
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
@@ -68,24 +68,16 @@ export function CaseApproach({ steps }: CaseApproachProps) {
                       {step.description}
                     </p>
 
-                    {/* Imagem opcional */}
+                    {/* Imagem opcional com lightbox */}
                     {step.image && (
-                      <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                        <Image
-                          src={step.image}
-                          alt={step.imageAlt || step.title}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, 800px"
-                        />
-                      </div>
-                    )}
-
-                    {/* Caption da imagem */}
-                    {step.imageCaption && (
-                      <p className="text-sm text-primary-600 italic mt-3">
-                        {step.imageCaption}
-                      </p>
+                      <ImageWithLightbox
+                        src={step.image}
+                        alt={step.imageAlt || step.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 800px"
+                        containerClassName="relative aspect-[4/3] shadow-lg"
+                        caption={step.imageCaption}
+                      />
                     )}
                   </div>
                 </div>

@@ -45,14 +45,14 @@ const baseStyles = `
 
 const variantStyles = {
   default: "bg-primary-100 text-primary-700 border border-primary-200",
-  success: "bg-success-50 text-success-600 border border-success-100",
-  secondary: "bg-primary-50 text-primary-600 border border-primary-100",
-  accent: "bg-accent-50 text-accent-600 border border-accent-100",
+  success: "bg-success-50 text-success-600 border border-success-200 shadow-sm",
+  secondary: "bg-white text-primary-700 border border-primary-200 shadow-sm",
+  accent: "bg-accent-50 text-accent-600 border border-accent-200",
 };
 
 const sizeStyles = {
-  sm: "px-2.5 py-0.5 text-xs",
-  md: "px-3 py-1 text-sm",
+  sm: "px-3 py-1 text-xs",
+  md: "px-4 py-1.5 text-sm",
 };
 
 // ============================================

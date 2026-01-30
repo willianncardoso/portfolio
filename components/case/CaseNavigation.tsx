@@ -64,23 +64,25 @@ export function CaseNavigation({ nextCaseId }: CaseNavigationProps) {
             Next Project
           </p>
 
-          <Link href={`/cases/${nextCase.id}`}>
-            <div className="group p-8 bg-white rounded-2xl shadow-sm border border-primary-100 hover:border-accent-500 hover:shadow-lg transition-all duration-300">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="text-left flex-1">
-                  <p className="text-sm text-accent-500 font-medium mb-2">
-                    {nextCase.category}
-                  </p>
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-2 group-hover:text-accent-500 transition-colors">
-                    {nextCase.title}
-                  </h3>
-                  <p className="text-base text-primary-600">
-                    {nextCase.cardDescription}
-                  </p>
-                </div>
-
-                <ArrowRight className="w-8 h-8 text-accent-500 group-hover:translate-x-2 transition-transform flex-shrink-0" />
+          <Link
+            href={`/cases/${nextCase.id}`}
+            aria-label={`View next project: ${nextCase.title}`}
+            className="group block p-8 bg-white rounded-2xl shadow-sm border border-primary-100 hover:border-accent-500 hover:shadow-lg transition-all duration-300"
+          >
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="text-left flex-1">
+                <p className="text-sm text-accent-500 font-medium mb-2">
+                  {nextCase.category}
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-2 group-hover:text-accent-500 transition-colors">
+                  {nextCase.title}
+                </h3>
+                <p className="text-base text-primary-600">
+                  {nextCase.cardDescription}
+                </p>
               </div>
+
+              <ArrowRight className="w-8 h-8 text-accent-500 group-hover:translate-x-2 transition-transform flex-shrink-0" aria-hidden="true" />
             </div>
           </Link>
         </motion.div>

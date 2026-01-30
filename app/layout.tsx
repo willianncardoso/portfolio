@@ -33,6 +33,9 @@ const inter = Inter({
 // ============================================
 // Informações para Google, redes sociais, etc
 export const metadata: Metadata = {
+  // URL base para resolução de URLs relativas (Open Graph, Twitter)
+  metadataBase: new URL("https://williancardoso.github.io/portfolio"),
+
   // Título da aba do navegador
   title: {
     default: siteConfig.seo.title,
@@ -116,12 +119,20 @@ export default function RootLayout({
           font-sans: usa a fonte Inter definida acima
         */}
 
+        {/* Skip Link para acessibilidade (navegação por teclado) */}
+        <a
+          href="#main"
+          className="skip-link"
+        >
+          Skip to main content
+        </a>
+
         {/* Header fixo no topo */}
         <Header />
 
         {/* Conteúdo da página */}
         {/* pt-16 compensa a altura do header fixo */}
-        <main className="min-h-screen pt-16">{children}</main>
+        <main id="main" className="min-h-screen pt-16">{children}</main>
 
         {/* Rodapé */}
         <Footer />

@@ -33,7 +33,7 @@ export function DifferentiatorsSection() {
             return (
               <motion.div key={index} {...staggerItem}>
                 <Card hover padding="lg" className="h-full">
-                  <IconComponent className="text-accent-500 mb-4" size={32} />
+                  <IconComponent className="text-accent-500 mb-4" size={32} aria-hidden="true" />
                   <h3 className="text-xl font-bold text-primary-900 mb-3">
                     {item.title}
                   </h3>

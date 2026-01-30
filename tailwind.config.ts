@@ -68,19 +68,22 @@ const config: Config = {
           950: "#020617",  // Preto quase puro (uso esporádico)
         },
 
-        // COR DE DESTAQUE/AÇÃO (Blue)
+        // COR DE DESTAQUE/AÇÃO (Professional Blue)
         // Usada para links, botões primários, badges, elementos interativos
         accent: {
-          50: "#eff6ff",
-          100: "#dbeafe",
+          50: "rgba(0, 102, 255, 0.05)",
+          100: "rgba(0, 102, 255, 0.1)",
           200: "#bfdbfe",
           300: "#93c5fd",
           400: "#60a5fa",
-          500: "#3b82f6",  // ← COR PRINCIPAL DE DESTAQUE
-          600: "#2563eb",  // ← COR DE HOVER
+          500: "#0066FF",  // ← COR PRINCIPAL DE DESTAQUE (Professional Blue)
+          600: "#0052CC",  // ← COR DE HOVER
           700: "#1d4ed8",
           800: "#1e40af",
           900: "#1e3a8a",
+          DEFAULT: "#0066FF",
+          light: "#3384FF",
+          dark: "#0052CC",
         },
 
         // COR DE SUCESSO (Green)
@@ -171,19 +174,25 @@ const config: Config = {
       // ============================================
       animation: {
         // Animação de fade in suave
-        "fade-in": "fade-in 0.5s ease-out",
+        "fade-in": "fadeIn 0.6s ease-out",
         // Animação de slide up (elemento sobe)
-        "slide-up": "slide-up 0.5s ease-out",
+        "slide-up": "slideUp 0.6s ease-out",
+        // Animação de slide in from right
+        "slide-in-right": "slideInRight 0.5s ease-out",
       },
 
       keyframes: {
-        "fade-in": {
+        fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        "slide-up": {
+        slideUp: {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        slideInRight: {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
         },
       },
 

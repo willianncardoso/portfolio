@@ -54,21 +54,23 @@ interface CardProps {
 const baseStyles = `
   bg-white
   border border-primary-200
-  rounded-xl
-  transition-all duration-200
+  rounded-2xl
+  shadow-sm
+  transition-all duration-300 ease-out
 `;
 
 const paddingStyles = {
   none: "",
   sm: "p-4", // 16px
   md: "p-6", // 24px
-  lg: "p-8", // 32px
+  lg: "p-8 md:p-10", // 32px desktop 40px
 };
 
 const hoverStyles = `
-  hover:-translate-y-1
-  hover:shadow-lg
-  hover:border-primary-300
+  hover:-translate-y-2
+  hover:shadow-2xl
+  hover:border-accent-500/50
+  hover:bg-white
 `;
 
 // ============================================

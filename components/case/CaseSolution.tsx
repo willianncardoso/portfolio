@@ -19,11 +19,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Card } from "@/components/ui/Card";
+import { ImageWithLightbox } from "@/components/ui/ImageWithLightbox";
 import { CaseSolution as CaseSolutionType } from "@/types";
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
@@ -63,46 +63,36 @@ export function CaseSolution({ solution }: CaseSolutionProps) {
                   {highlight.description}
                 </p>
 
-                {/* Imagem do highlight */}
+                {/* Imagem do highlight com lightbox */}
                 {highlight.image && (
-                  <div className="relative aspect-video rounded-lg overflow-hidden">
-                    <Image
-                      src={highlight.image}
-                      alt={highlight.imageAlt || highlight.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
+                  <ImageWithLightbox
+                    src={highlight.image}
+                    alt={highlight.imageAlt || highlight.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    containerClassName="relative aspect-video"
+                  />
                 )}
               </Card>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Imagem principal */}
+        {/* Imagem principal com lightbox */}
         {solution.mainImage && (
           <motion.div
             {...fadeInUp}
             transition={{ delay: 0.3 }}
             className="relative"
           >
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={solution.mainImage}
-                alt={solution.mainImageAlt || "Solution"}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 896px"
-              />
-            </div>
-
-            {/* Caption */}
-            {solution.mainImageCaption && (
-              <p className="text-sm text-primary-600 italic text-center mt-4">
-                {solution.mainImageCaption}
-              </p>
-            )}
+            <ImageWithLightbox
+              src={solution.mainImage}
+              alt={solution.mainImageAlt || "Solution"}
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              containerClassName="relative aspect-video rounded-2xl shadow-2xl"
+              caption={solution.mainImageCaption}
+            />
           </motion.div>
         )}
       </Container>

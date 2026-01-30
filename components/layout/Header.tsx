@@ -73,9 +73,10 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-primary-700 hover:text-accent-500 font-medium transition-colors"
+                className="relative text-primary-700 hover:text-accent-500 font-medium transition-all duration-300 py-2 group"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-500 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
 
@@ -111,9 +112,10 @@ export function Header() {
               MENU HAMBURGUER (Mobile)
               ============================================ */}
           <button
-            className="md:hidden p-2 text-primary-700 hover:text-accent-500 transition-colors"
+            className="md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary-700 hover:text-accent-500 hover:bg-accent-50 rounded-lg transition-all duration-200"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -123,54 +125,58 @@ export function Header() {
       {/* ============================================
           MENU MOBILE (Overlay)
           ============================================ */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-primary-200">
-          <Container>
-            <nav className="py-4 space-y-4">
-              {/* Links do menu */}
-              {siteConfig.navigation.mainMenu.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
+      <div
+        className={cn(
+          "md:hidden bg-white border-t border-primary-200 overflow-hidden transition-all duration-300 ease-out",
+          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <Container>
+          <nav className="py-4 space-y-2">
+            {/* Links do menu */}
+            {siteConfig.navigation.mainMenu.map((item, index) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={closeMobileMenu}
+                className="block py-3 px-4 text-primary-700 hover:text-accent-500 hover:bg-accent-50 font-medium transition-all duration-200 rounded-lg"
+                style={{ transitionDelay: mobileMenuOpen ? `${index * 50}ms` : '0ms' }}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Separador */}
+            <div className="border-t border-primary-200 my-4" />
+
+            {/* Botões */}
+            <div className="space-y-3 px-4">
+              {siteConfig.links.linkedin && (
+                <Button
+                  href={siteConfig.links.linkedin}
+                  external
+                  variant="ghost"
+                  fullWidth
                   onClick={closeMobileMenu}
-                  className="block py-2 text-primary-700 hover:text-accent-500 font-medium transition-colors"
                 >
-                  {item.label}
-                </Link>
-              ))}
-
-              {/* Separador */}
-              <div className="border-t border-primary-200 my-4" />
-
-              {/* Botões */}
-              <div className="space-y-2">
-                {siteConfig.links.linkedin && (
-                  <Button
-                    href={siteConfig.links.linkedin}
-                    external
-                    variant="ghost"
-                    fullWidth
-                    onClick={closeMobileMenu}
-                  >
-                    LinkedIn
-                  </Button>
-                )}
-                {siteConfig.links.resume && (
-                  <Button
-                    href={siteConfig.links.resume}
-                    external
-                    variant="secondary"
-                    fullWidth
-                    onClick={closeMobileMenu}
-                  >
-                    Resume
-                  </Button>
-                )}
-              </div>
-            </nav>
-          </Container>
-        </div>
-      )}
+                  LinkedIn
+                </Button>
+              )}
+              {siteConfig.links.resume && (
+                <Button
+                  href={siteConfig.links.resume}
+                  external
+                  variant="secondary"
+                  fullWidth
+                  onClick={closeMobileMenu}
+                >
+                  Resume
+                </Button>
+              )}
+            </div>
+          </nav>
+        </Container>
+      </div>
     </header>
   );
 }

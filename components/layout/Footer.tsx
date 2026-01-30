@@ -34,14 +34,14 @@ export function Footer() {
               </p>
 
               {/* Links sociais */}
-              <div className="flex items-center gap-4 pt-2">
+              <div className="flex items-center gap-2 pt-2">
                 {siteConfig.email && (
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="text-primary-600 hover:text-accent-500 transition-colors"
-                    aria-label="Email"
+                    className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary-600 hover:text-accent-500 hover:bg-accent-50 rounded-lg transition-all duration-200"
+                    aria-label="Send email"
                   >
-                    <Mail size={20} />
+                    <Mail size={22} />
                   </a>
                 )}
                 {siteConfig.links.linkedin && (
@@ -49,10 +49,10 @@ export function Footer() {
                     href={siteConfig.links.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-accent-500 transition-colors"
-                    aria-label="LinkedIn"
+                    className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary-600 hover:text-accent-500 hover:bg-accent-50 rounded-lg transition-all duration-200"
+                    aria-label="Visit LinkedIn profile"
                   >
-                    <Linkedin size={20} />
+                    <Linkedin size={22} />
                   </a>
                 )}
                 {siteConfig.links.github && (
@@ -60,10 +60,10 @@ export function Footer() {
                     href={siteConfig.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-accent-500 transition-colors"
-                    aria-label="GitHub"
+                    className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary-600 hover:text-accent-500 hover:bg-accent-50 rounded-lg transition-all duration-200"
+                    aria-label="Visit GitHub profile"
                   >
-                    <Github size={20} />
+                    <Github size={22} />
                   </a>
                 )}
               </div>
@@ -78,12 +78,12 @@ export function Footer() {
                 <h4 className="font-semibold text-primary-900 mb-4">
                   Navigation
                 </h4>
-                <ul className="space-y-2">
+                <ul className="space-y-1">
                   {siteConfig.navigation.mainMenu.map((item) => (
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="text-primary-600 hover:text-accent-500 transition-colors"
+                        className="inline-block py-2 text-primary-600 hover:text-accent-500 transition-colors min-h-[44px] flex items-center"
                       >
                         {item.label}
                       </Link>
@@ -97,14 +97,14 @@ export function Footer() {
                 <h4 className="font-semibold text-primary-900 mb-4">
                   Resources
                 </h4>
-                <ul className="space-y-2">
+                <ul className="space-y-1">
                   {siteConfig.links.resume && (
                     <li>
                       <a
                         href={siteConfig.links.resume}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary-600 hover:text-accent-500 transition-colors"
+                        className="inline-block py-2 text-primary-600 hover:text-accent-500 transition-colors min-h-[44px] flex items-center"
                       >
                         Resume
                       </a>
@@ -116,7 +116,7 @@ export function Footer() {
                         href={siteConfig.links.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary-600 hover:text-accent-500 transition-colors"
+                        className="inline-block py-2 text-primary-600 hover:text-accent-500 transition-colors min-h-[44px] flex items-center"
                       >
                         LinkedIn
                       </a>

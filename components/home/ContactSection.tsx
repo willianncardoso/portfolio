@@ -22,11 +22,11 @@ export function ContactSection() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button href={`mailto:${siteConfig.email}`} size="lg">
-              <Mail className="mr-2" size={20} />
+              <Mail className="mr-2" size={20} aria-hidden="true" />
               {homeContent.contact.emailButtonText}
             </Button>
             <Button href={siteConfig.links.linkedin} external variant="secondary" size="lg">
-              <Linkedin className="mr-2" size={20} />
+              <Linkedin className="mr-2" size={20} aria-hidden="true" />
               {homeContent.contact.linkedinButtonText}
             </Button>
           </div>

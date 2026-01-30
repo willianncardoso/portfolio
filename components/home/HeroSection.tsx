@@ -16,7 +16,11 @@ import { fadeInUp, fadeInDown } from "@/lib/animations";
 
 export function HeroSection() {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-50/50 via-white to-primary-50/30 -z-10" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-500/5 rounded-full blur-3xl -z-10" />
       <Container>
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Badge de disponibilidade */}
@@ -51,9 +55,9 @@ export function HeroSection() {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
           >
-            <Button href="#work" size="lg">
+            <Button href="#work" size="lg" id="view-work-cta">
               {homeContent.hero.primaryCTA}
-              <ArrowRight className="ml-2" size={20} />
+              <ArrowRight className="ml-2" size={20} aria-hidden="true" />
             </Button>
             {siteConfig.links.linkedin && (
               <Button

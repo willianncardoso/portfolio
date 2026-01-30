@@ -34,13 +34,13 @@
  */
 
 /** Duração padrão das animações (em segundos) */
-export const ANIMATION_DURATION = 0.3;
+export const ANIMATION_DURATION = 0.5;
 
 /** Delay entre animações em sequência (stagger) */
-export const STAGGER_DELAY = 0.05;
+export const STAGGER_DELAY = 0.08;
 
-/** Curva de easing (aceleração) padrão */
-export const DEFAULT_EASE = "easeOut" as const;
+/** Curva de easing (aceleração) padrão - usando cubic-bezier para movimento mais natural */
+export const DEFAULT_EASE = [0.25, 0.1, 0.25, 1] as const; // equivalent to ease-out but smoother
 
 /**
  * ============================================

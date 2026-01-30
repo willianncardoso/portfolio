@@ -27,7 +27,11 @@ export function CasesGridSection() {
         >
           {featuredCases.map((caseItem) => (
             <motion.div key={caseItem.id} {...staggerItem}>
-              <Link href={`/cases/${caseItem.id}`} className="block">
+              <Link
+                href={`/cases/${caseItem.id}`}
+                className="block"
+                aria-label={`View case study: ${caseItem.title}`}
+              >
                 <Card hover padding="none" className="overflow-hidden group">
                 {/* Imagem do case com gradient overlay */}
                 <div className="relative aspect-[16/10] bg-gradient-to-br from-primary-100 to-primary-50 overflow-hidden">

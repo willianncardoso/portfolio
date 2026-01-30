@@ -64,13 +64,13 @@ export function SectionTitle({
       )}
 
       {/* Título principal */}
-      <Component className="text-3xl md:text-4xl font-bold text-primary-900">
+      <Component className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-900 tracking-tight">
         {children}
       </Component>
 
       {/* Subtítulo opcional abaixo do título */}
       {subtitle && (
-        <p className="text-lg text-primary-600 max-w-3xl">
+        <p className="text-lg md:text-xl text-primary-600 max-w-3xl leading-relaxed">
           {subtitle}
         </p>
       )}
