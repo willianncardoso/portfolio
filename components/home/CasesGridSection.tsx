@@ -1,71 +1,66 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
 import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { homeContent } from "@/content/home-content";
-import { getFeaturedCases } from "@/content/cases";
+import { Badge } from "@/components/ui/Badge";
+import { allCases } from "@/content";
 import { staggerContainer, staggerItem } from "@/lib/animations";
+import { getImagePath } from "@/lib/image-path";
 
 export function CasesGridSection() {
-  const featuredCases = getFeaturedCases(homeContent.featuredWork.caseIds);
-
   return (
-    <Section id="work" spacing="xl">
+    <section id="work" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <Container>
-        <SectionTitle subtitle={homeContent.featuredWork.sectionSubtitle}>
-          {homeContent.featuredWork.sectionTitle}
-        </SectionTitle>
+        <SectionTitle
+          tag="Featured Work"
+          title="Selected projects showcasing my approach to enterprise product design."
+        />
 
         <motion.div
-          {...staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {featuredCases.map((caseItem) => (
-            <motion.div key={caseItem.id} {...staggerItem}>
+          {allCases.map((caseStudy) => (
+            <motion.div key={caseStudy.id} variants={staggerItem}>
               <Link
-                href={`/cases/${caseItem.id}`}
-                className="block"
-                aria-label={`View case study: ${caseItem.title}`}
+                href={`/cases/${caseStudy.id}`}
+                className="group block relative overflow-hidden rounded-2xl bg-white border border-gray-200 hover:border-primary-500 transition-all duration-300 hover:shadow-xl"
               >
-                <Card hover padding="none" className="overflow-hidden group">
-                {/* Imagem do case com gradient overlay */}
-                <div className="relative aspect-[16/10] bg-gradient-to-br from-primary-100 to-primary-50 overflow-hidden">
+                {/* Thumbnail da imagem */}
+                <div className="aspect-video relative overflow-hidden bg-gray-100">
                   <Image
-                    src={caseItem.images.cover}
-                    alt={caseItem.title}
+                    src={getImagePath(caseStudy.thumbnail)}
+                    alt={caseStudy.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* Overlay escuro para melhor legibilidade */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-
-                  {/* Badge de categoria sobre a imagem */}
-                  <div className="absolute top-4 left-4">
-                    <Badge size="sm" variant="secondary" className="bg-white/90 backdrop-blur-sm">
-                      {caseItem.category}
-                    </Badge>
-                  </div>
                 </div>
 
                 {/* Conteúdo do card */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary-900 mb-2 group-hover:text-accent-500 transition-colors">
-                    {caseItem.title}
+                  <Badge variant="outline" className="mb-3">
+                    {caseStudy.category}
+                  </Badge>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                    {caseStudy.title}
                   </h3>
-                  <p className="text-primary-600">{caseItem.cardDescription}</p>
+
+                  <p className="text-gray-600 line-clamp-2">
+                    {caseStudy.description}
+                  </p>
                 </div>
-              </Card>
               </Link>
             </motion.div>
           ))}
         </motion.div>
       </Container>
-    </Section>
+    </section>
   );
 }
