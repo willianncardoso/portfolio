@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Badge } from "@/components/ui/Badge";
-import { allCases } from "@/content";
+import { allCases } from "@/content/cases";
 import { staggerContainer, staggerItem } from "@/lib/animations";
 import { getImagePath } from "@/lib/image-path";
 
