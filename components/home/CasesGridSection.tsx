@@ -14,10 +14,9 @@ export function CasesGridSection() {
   return (
     <section id="work" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <Container>
-        <SectionTitle
-          tag="Featured Work"
-          title="Selected projects showcasing my approach to enterprise product design."
-        />
+        <SectionTitle badge="Featured Work">
+          Selected projects showcasing my approach to enterprise product design.
+        </SectionTitle>
 
         <motion.div
           variants={staggerContainer}
