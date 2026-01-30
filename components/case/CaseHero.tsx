@@ -39,7 +39,7 @@ export function CaseHero({ caseStudy }: CaseHeroProps) {
         >
           {/* Badge da categoria */}
           <motion.div variants={fadeInUp} className="mb-6">
-            <Badge className="border-white/30 text-white">
+            <Badge className="border-white/30 text-white bg-white/10">
               {category}
             </Badge>
           </motion.div>
@@ -52,7 +52,7 @@ export function CaseHero({ caseStudy }: CaseHeroProps) {
             {title}
           </motion.h1>
 
-          {/* Descrição */}
+          {/* Subtítulo */}
           <motion.p
             variants={fadeInUp}
             className="text-xl text-gray-200 max-w-3xl mx-auto"

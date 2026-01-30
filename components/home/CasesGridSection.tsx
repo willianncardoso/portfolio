@@ -34,7 +34,7 @@ export function CasesGridSection() {
                 {/* Thumbnail da imagem */}
                 <div className="aspect-video relative overflow-hidden bg-gray-100">
                   <Image
-                    src={getImagePath(caseStudy.thumbnail)}
+                    src={getImagePath(caseStudy.images.cover)}
                     alt={caseStudy.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -43,7 +43,7 @@ export function CasesGridSection() {
 
                 {/* Conteúdo do card */}
                 <div className="p-6">
-                  <Badge variant="outline" className="mb-3">
+                  <Badge className="mb-3">
                     {caseStudy.category}
                   </Badge>
 
@@ -52,7 +52,7 @@ export function CasesGridSection() {
                   </h3>
 
                   <p className="text-gray-600 line-clamp-2">
-                    {caseStudy.description}
+                    {caseStudy.cardDescription}
                   </p>
                 </div>
               </Link>
