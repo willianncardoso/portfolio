@@ -13,7 +13,7 @@ interface CaseHeroProps {
 }
 
 export function CaseHero({ caseStudy }: CaseHeroProps) {
-  const { title, category, description, images } = caseStudy;
+  const { title, category, subtitle, images } = caseStudy;
 
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -57,7 +57,7 @@ export function CaseHero({ caseStudy }: CaseHeroProps) {
             variants={fadeInUp}
             className="text-xl text-gray-200 max-w-3xl mx-auto"
           >
-            {description}
+            {subtitle}
           </motion.p>
         </motion.div>
       </Container>
