@@ -15,13 +15,9 @@
  * - Background cinza claro
  */
 
-"use client";
-
-import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { CaseMetric } from "@/types";
-import { staggerContainer, staggerItem } from "@/lib/animations";
 
 interface CaseMetricsProps {
   metrics: CaseMetric[];
@@ -33,14 +29,10 @@ export function CaseMetrics({ metrics }: CaseMetricsProps) {
   return (
     <Section spacing="lg" background="gray">
       <Container size="md">
-        <motion.div
-          {...staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {metrics.map((metric, index) => (
-            <motion.div
+            <div
               key={index}
-              {...staggerItem}
               className="text-center p-8 bg-white rounded-2xl shadow-sm border border-primary-100"
             >
               {/* Valor da métrica */}
@@ -52,9 +44,9 @@ export function CaseMetrics({ metrics }: CaseMetricsProps) {
               <div className="text-sm md:text-base text-primary-600">
                 {metric.label}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </Container>
     </Section>
   );

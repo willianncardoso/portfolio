@@ -5,14 +5,12 @@
 
 "use client";
 
-import { motion } from "framer-motion";
 import { Mail, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { siteConfig } from "@/content/site-config";
-import { fadeInUp } from "@/lib/animations";
 
 export function ContactSection() {
   const t = useTranslations("contact");
@@ -20,10 +18,7 @@ export function ContactSection() {
   return (
     <Section id="contact" spacing="xl" background="gray">
       <Container>
-        <motion.div
-          {...fadeInUp}
-          className="max-w-3xl mx-auto text-center space-y-6"
-        >
+        <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900">
             {t("title")}
           </h2>
@@ -46,7 +41,7 @@ export function ContactSection() {
           </div>
 
           <p className="text-sm text-primary-500 pt-4">{t("additionalInfo")}</p>
-        </motion.div>
+        </div>
       </Container>
     </Section>
   );

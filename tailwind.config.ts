@@ -89,6 +89,7 @@ const config: Config = {
         success: {
           50: "#f0fdf4",
           100: "#dcfce7",
+          200: "#bbf7d0",
           500: "#22c55e",  // ← COR PRINCIPAL
           600: "#16a34a",  // ← COR DE HOVER
         },

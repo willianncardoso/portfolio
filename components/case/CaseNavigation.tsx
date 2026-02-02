@@ -15,16 +15,12 @@
  * - Se null: mostra "Back to All Projects"
  */
 
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Grid3x3 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
 import { allCases } from "@/content/cases";
-import { fadeInUp } from "@/lib/animations";
 
 interface CaseNavigationProps {
   nextCaseId: string | null;
@@ -36,14 +32,14 @@ export function CaseNavigation({ nextCaseId }: CaseNavigationProps) {
     return (
       <Section spacing="xl" background="white">
         <Container size="sm">
-          <motion.div {...fadeInUp} className="text-center">
+          <div className="text-center">
             <Link href="/#work">
               <Button variant="primary" size="lg" className="group">
                 <Grid3x3 className="w-5 h-5 mr-2" />
                 Back to All Projects
               </Button>
             </Link>
-          </motion.div>
+          </div>
         </Container>
       </Section>
     );
@@ -59,7 +55,7 @@ export function CaseNavigation({ nextCaseId }: CaseNavigationProps) {
   return (
     <Section spacing="xl" background="gray">
       <Container size="md">
-        <motion.div {...fadeInUp} className="text-center">
+        <div className="text-center">
           <p className="text-sm uppercase tracking-wider text-primary-600 mb-4">
             Next Project
           </p>
@@ -67,7 +63,7 @@ export function CaseNavigation({ nextCaseId }: CaseNavigationProps) {
           <Link
             href={`/cases/${nextCase.id}`}
             aria-label={`View next project: ${nextCase.title}`}
-            className="group block p-8 bg-white rounded-2xl shadow-sm border border-primary-100 hover:border-accent-500 hover:shadow-lg transition-all duration-300"
+            className="group block p-8 bg-white rounded-2xl shadow-sm border border-primary-100 hover:border-accent-500 hover:shadow-lg transition-all duration-200"
           >
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-left flex-1">
@@ -85,7 +81,7 @@ export function CaseNavigation({ nextCaseId }: CaseNavigationProps) {
               <ArrowRight className="w-8 h-8 text-accent-500 group-hover:translate-x-2 transition-transform flex-shrink-0" aria-hidden="true" />
             </div>
           </Link>
-        </motion.div>
+        </div>
       </Container>
     </Section>
   );

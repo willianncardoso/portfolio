@@ -15,15 +15,11 @@
  * - Alternância de layout da imagem (esquerda/direita) em desktop
  */
 
-"use client";
-
-import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { ImageWithLightbox } from "@/components/ui/ImageWithLightbox";
 import { CaseApproachStep } from "@/types";
-import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 interface CaseApproachProps {
   steps: CaseApproachStep[];
@@ -35,56 +31,47 @@ export function CaseApproach({ steps }: CaseApproachProps) {
   return (
     <Section spacing="xl" background="white">
       <Container size="md">
-        <motion.div {...fadeInUp}>
-          <SectionTitle align="left">My Approach</SectionTitle>
-        </motion.div>
+        <SectionTitle align="left">My Approach</SectionTitle>
 
-        <motion.div {...staggerContainer} className="relative mt-12 space-y-16">
-          {steps.map((step, index) => {
+        <div className="relative mt-12 space-y-16">
+          {steps.map((step, index) => (
+            <div key={index} className="relative">
+              {/* Linha vertical conectora (exceto no último) */}
+              {index < steps.length - 1 && (
+                <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-primary-200 -z-10" />
+              )}
 
-            return (
-              <motion.div
-                key={index}
-                {...staggerItem}
-                className="relative"
-              >
-                {/* Linha vertical conectora (exceto no último) */}
-                {index < steps.length - 1 && (
-                  <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-primary-200 -z-10" />
-                )}
-
-                <div className="flex flex-col md:flex-row gap-8 items-start">
-                  {/* Número em círculo */}
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent-500 text-white flex items-center justify-center text-xl font-bold z-10">
-                    {index + 1}
-                  </div>
-
-                  {/* Conteúdo do step */}
-                  <div className="flex-1">
-                    <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="text-base md:text-lg text-primary-700 leading-relaxed mb-6">
-                      {step.description}
-                    </p>
-
-                    {/* Imagem opcional com lightbox */}
-                    {step.image && (
-                      <ImageWithLightbox
-                        src={step.image}
-                        alt={step.imageAlt || step.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 800px"
-                        containerClassName="relative aspect-[4/3] shadow-lg"
-                        caption={step.imageCaption}
-                      />
-                    )}
-                  </div>
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Número em círculo */}
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent-500 text-white flex items-center justify-center text-xl font-bold z-10">
+                  {index + 1}
                 </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+
+                {/* Conteúdo do step */}
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">
+                    {step.title}
+                  </h3>
+                  <p className="text-base md:text-lg text-primary-700 leading-relaxed mb-6">
+                    {step.description}
+                  </p>
+
+                  {/* Imagem opcional com lightbox */}
+                  {step.image && (
+                    <ImageWithLightbox
+                      src={step.image}
+                      alt={step.imageAlt || step.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      containerClassName="relative aspect-[4/3] shadow-lg"
+                      caption={step.imageCaption}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </Container>
     </Section>
   );

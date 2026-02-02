@@ -15,15 +15,10 @@
  * - Typography destacada para valores em bold
  */
 
-"use client";
-
-import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { staggerContainer, staggerItem } from "@/lib/animations";
-import { fadeInUp } from "@/lib/animations";
 
 interface CaseResultsProps {
   results: string[];
@@ -53,27 +48,18 @@ export function CaseResults({ results }: CaseResultsProps) {
   return (
     <Section spacing="xl" background="white">
       <Container size="md">
-        <motion.div {...fadeInUp}>
-          <SectionTitle align="left">Results & Impact</SectionTitle>
-        </motion.div>
+        <SectionTitle align="left">Results & Impact</SectionTitle>
 
-        <motion.ul
-          {...staggerContainer}
-          className="space-y-6 mt-12 max-w-3xl"
-        >
+        <ul className="space-y-6 mt-12 max-w-3xl">
           {results.map((result, index) => (
-            <motion.li
-              key={index}
-              {...staggerItem}
-              className="flex items-start gap-4"
-            >
+            <li key={index} className="flex items-start gap-4">
               <CheckCircle2 className="w-7 h-7 text-success-500 flex-shrink-0 mt-0.5" />
               <span className="text-base md:text-lg text-primary-700 leading-relaxed">
                 {renderMarkdownBold(result)}
               </span>
-            </motion.li>
+            </li>
           ))}
-        </motion.ul>
+        </ul>
       </Container>
     </Section>
   );
