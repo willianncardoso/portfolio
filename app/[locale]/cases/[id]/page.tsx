@@ -1,7 +1,15 @@
+/**
+ * ============================================
+ * CASE STUDY PAGE (Localized)
+ * ============================================
+ */
+
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { allCases } from "@/content/cases";
 import { siteConfig } from "@/content/site-config";
+import { routing } from "@/i18n/routing";
 import { CaseHero } from "@/components/case/CaseHero";
 import { CaseMetrics } from "@/components/case/CaseMetrics";
 import { CaseOverview } from "@/components/case/CaseOverview";
@@ -12,16 +20,26 @@ import { CaseResults } from "@/components/case/CaseResults";
 import { CaseLearnings } from "@/components/case/CaseLearnings";
 import { CaseNavigation } from "@/components/case/CaseNavigation";
 
-export async function generateStaticParams() {
-  return allCases.map((caseStudy) => ({
-    id: caseStudy.id,
-  }));
+// Generate static params for all locales and cases
+export function generateStaticParams() {
+  const params: { locale: string; id: string }[] = [];
+
+  for (const locale of routing.locales) {
+    for (const caseStudy of allCases) {
+      params.push({
+        locale,
+        id: caseStudy.id,
+      });
+    }
+  }
+
+  return params;
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ locale: string; id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
   const caseStudy = allCases.find((c) => c.id === id);
@@ -64,12 +82,16 @@ export async function generateMetadata({
   };
 }
 
-export default async function CasePage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
+interface CasePageProps {
+  params: Promise<{ locale: string; id: string }>;
+}
+
+export default async function CasePage({ params }: CasePageProps) {
+  const { locale, id } = await params;
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const caseStudy = allCases.find((c) => c.id === id);
 
   if (!caseStudy) {

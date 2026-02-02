@@ -36,7 +36,7 @@ interface ButtonProps {
   children: React.ReactNode;
 
   /** Estilo visual do botão */
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "ghost-dark";
 
   /** Tamanho do botão */
   size?: "sm" | "md" | "lg";
@@ -96,6 +96,12 @@ const variantStyles = {
   ghost: `
     bg-transparent text-accent-500
     hover:text-accent-600 hover:bg-accent-50
+  `,
+  "ghost-dark": `
+    border-2 border-white/40 text-white
+    backdrop-blur-sm bg-white/10
+    hover:border-white hover:bg-white/20
+    shadow-sm hover:shadow-md
   `,
 };
 

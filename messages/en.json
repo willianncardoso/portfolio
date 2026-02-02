@@ -1,0 +1,80 @@
+{
+  "site": {
+    "name": "Willian Cardoso",
+    "title": "Lead Product Designer",
+    "location": "São Paulo, Brazil",
+    "bio": "7+ years at IBM designing B2B SaaS products, design systems, and data-heavy dashboards. I code in Python, read JavaScript/Vue fluently, and think in systems."
+  },
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "resume": "Resume",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "Open to remote roles — US, UK, Germany, Portugal, NL | Also open to CLT in Brazil",
+    "headline": "I design complex enterprise software that people actually want to use.",
+    "description": "7+ years at IBM designing B2B SaaS products, design systems, and data-heavy dashboards. I code in Python, read JavaScript/Vue fluently, and think in systems.",
+    "primaryCTA": "View Work",
+    "secondaryCTA": "LinkedIn"
+  },
+  "differentiators": {
+    "title": "What I Bring",
+    "subtitle": "More than just design — a unique combination of skills that bridges design, code, and research.",
+    "items": {
+      "enterprise": {
+        "title": "Enterprise SaaS Expertise",
+        "description": "Configuration tools, operational dashboards, complex multi-step workflows. 7+ years solving problems at IBM scale — from legacy system modernization to 0→1 products."
+      },
+      "code": {
+        "title": "Design-to-Code Bridge",
+        "description": "I prototype in Python, read JavaScript/Vue codebases, and understand technical constraints firsthand. Started my career as a dev intern — I speak fluent engineer."
+      },
+      "research": {
+        "title": "Research & Neuroscience Lens",
+        "description": "Currently pursuing a Neuroscience degree and post-grad in Data Analytics. I don't just observe user behavior — I study how the brain actually makes decisions. Active researcher in Computational Neuroscience, applying NLP to preserve indigenous languages."
+      },
+      "global": {
+        "title": "Global Collaboration",
+        "description": "Worked with distributed teams across US, LATAM, and Europe. Fluent in async communication, Agile workflows, and cross-timezone alignment. Exchange year at University of Strathclyde (Scotland) — comfortable in international environments."
+      }
+    }
+  },
+  "featuredWork": {
+    "title": "Featured Work",
+    "subtitle": "Selected projects showcasing my approach to enterprise product design.",
+    "viewCase": "View Case Study"
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Let's build something great together",
+    "description": "I'm currently open to remote opportunities with international teams, as well as CLT positions in Brazil. Feel free to reach out.",
+    "emailButton": "Email Me",
+    "linkedinButton": "Connect on LinkedIn",
+    "additionalInfo": "Usually respond within 24 hours."
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+  "cases": {
+    "backToHome": "Back to Home",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "solution": "Solution",
+    "results": "Results",
+    "learnings": "Learnings",
+    "nextCase": "Next Case",
+    "previousCase": "Previous Case"
+  },
+  "accessibility": {
+    "skipToMain": "Skip to main content"
+  },
+  "seo": {
+    "title": "Willian Cardoso — Lead Product Designer",
+    "description": "Lead Product Designer with 7+ years at IBM. Specializing in enterprise SaaS, design systems, and complex B2B applications. Engineering background, Python skills, neuroscience lens."
+  }
+}

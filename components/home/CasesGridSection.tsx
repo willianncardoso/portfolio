@@ -1,8 +1,14 @@
+/**
+ * COMPONENTE: CasesGridSection
+ * Grid de cases em destaque
+ */
+
 "use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Badge } from "@/components/ui/Badge";
@@ -11,12 +17,12 @@ import { staggerContainer, staggerItem } from "@/lib/animations";
 import { getImagePath } from "@/lib/image-path";
 
 export function CasesGridSection() {
+  const t = useTranslations("featuredWork");
+
   return (
     <section id="work" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <Container>
-        <SectionTitle badge="Featured Work">
-          Selected projects showcasing my approach to enterprise product design.
-        </SectionTitle>
+        <SectionTitle badge={t("title")}>{t("subtitle")}</SectionTitle>
 
         <motion.div
           variants={staggerContainer}
@@ -31,7 +37,7 @@ export function CasesGridSection() {
                 href={`/cases/${caseStudy.id}`}
                 className="group block relative overflow-hidden rounded-2xl bg-white border border-gray-200 hover:border-primary-500 transition-all duration-300 hover:shadow-xl"
               >
-                {/* Thumbnail da imagem */}
+                {/* Thumbnail */}
                 <div className="aspect-video relative overflow-hidden bg-gray-100">
                   <Image
                     src={getImagePath(caseStudy.images.cover)}
@@ -41,11 +47,9 @@ export function CasesGridSection() {
                   />
                 </div>
 
-                {/* Conteúdo do card */}
+                {/* Card Content */}
                 <div className="p-6">
-                  <Badge className="mb-3">
-                    {caseStudy.category}
-                  </Badge>
+                  <Badge className="mb-3">{caseStudy.category}</Badge>
 
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
                     {caseStudy.title}

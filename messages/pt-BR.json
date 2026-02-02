@@ -1,0 +1,80 @@
+{
+  "site": {
+    "name": "Willian Cardoso",
+    "title": "Lead Product Designer",
+    "location": "São Paulo, Brasil",
+    "bio": "7+ anos na IBM projetando produtos B2B SaaS, design systems e dashboards data-heavy. Codifico em Python, leio JavaScript/Vue fluentemente e penso em sistemas."
+  },
+  "nav": {
+    "work": "Trabalhos",
+    "about": "Sobre",
+    "contact": "Contato",
+    "linkedin": "LinkedIn",
+    "resume": "Currículo",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "hero": {
+    "badge": "Aberto para vagas remotas — EUA, UK, Alemanha, Portugal, NL | Também aberto para CLT no Brasil",
+    "headline": "Eu projeto software empresarial complexo que as pessoas realmente querem usar.",
+    "description": "7+ anos na IBM projetando produtos B2B SaaS, design systems e dashboards data-heavy. Codifico em Python, leio JavaScript/Vue fluentemente e penso em sistemas.",
+    "primaryCTA": "Ver Trabalhos",
+    "secondaryCTA": "LinkedIn"
+  },
+  "differentiators": {
+    "title": "O Que Eu Trago",
+    "subtitle": "Mais do que apenas design — uma combinação única de habilidades que conecta design, código e pesquisa.",
+    "items": {
+      "enterprise": {
+        "title": "Expertise em SaaS Empresarial",
+        "description": "Ferramentas de configuração, dashboards operacionais, workflows complexos multi-etapas. 7+ anos resolvendo problemas na escala IBM — de modernização de sistemas legados a produtos 0→1."
+      },
+      "code": {
+        "title": "Ponte Design-para-Código",
+        "description": "Prototipo em Python, leio codebases JavaScript/Vue e entendo restrições técnicas em primeira mão. Comecei minha carreira como estagiário dev — falo engenheiro fluente."
+      },
+      "research": {
+        "title": "Lente de Pesquisa & Neurociência",
+        "description": "Cursando graduação em Neurociência e pós em Analytics de Dados. Não apenas observo comportamento do usuário — estudo como o cérebro realmente toma decisões. Pesquisador ativo em Neurociência Computacional, aplicando NLP para preservar línguas indígenas."
+      },
+      "global": {
+        "title": "Colaboração Global",
+        "description": "Trabalhei com times distribuídos nos EUA, LATAM e Europa. Fluente em comunicação assíncrona, workflows Ágeis e alinhamento entre fusos. Ano de intercâmbio na University of Strathclyde (Escócia) — confortável em ambientes internacionais."
+      }
+    }
+  },
+  "featuredWork": {
+    "title": "Trabalhos em Destaque",
+    "subtitle": "Projetos selecionados mostrando minha abordagem para design de produto enterprise.",
+    "viewCase": "Ver Case Study"
+  },
+  "contact": {
+    "badge": "Entre em Contato",
+    "title": "Vamos construir algo incrível juntos",
+    "description": "Estou atualmente aberto para oportunidades remotas com times internacionais, assim como posições CLT no Brasil. Fique à vontade para entrar em contato.",
+    "emailButton": "Enviar Email",
+    "linkedinButton": "Conectar no LinkedIn",
+    "additionalInfo": "Geralmente respondo em 24 horas."
+  },
+  "footer": {
+    "copyright": "Todos os direitos reservados.",
+    "builtWith": "Feito com Next.js & Tailwind CSS"
+  },
+  "cases": {
+    "backToHome": "Voltar para Home",
+    "challenge": "Desafio",
+    "approach": "Abordagem",
+    "solution": "Solução",
+    "results": "Resultados",
+    "learnings": "Aprendizados",
+    "nextCase": "Próximo Case",
+    "previousCase": "Case Anterior"
+  },
+  "accessibility": {
+    "skipToMain": "Pular para conteúdo principal"
+  },
+  "seo": {
+    "title": "Willian Cardoso — Lead Product Designer",
+    "description": "Lead Product Designer com 7+ anos na IBM. Especializado em SaaS enterprise, design systems e aplicações B2B complexas. Background em engenharia, habilidades em Python, lente de neurociência."
+  }
+}

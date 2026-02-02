@@ -3,37 +3,43 @@
  * COMPONENTE: Footer (Rodapé)
  * ============================================
  *
- * Rodapé do site com links, informações de contato e copyright.
- * Aparece em todas as páginas.
+ * Rodapé com links, informações de contato e copyright.
  */
 
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Mail, Linkedin, Github } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Link } from "@/i18n/routing";
 import { siteConfig } from "@/content/site-config";
 
 export function Footer() {
+  const t = useTranslations();
   const currentYear = new Date().getFullYear();
+
+  const navItems = [
+    { label: t("nav.work"), href: "/#work" },
+    { label: t("nav.about"), href: "/about" },
+    { label: t("nav.contact"), href: "/#contact" },
+  ];
 
   return (
     <footer className="bg-primary-50 border-t border-primary-200 mt-20">
       <Container>
         <div className="py-12 md:py-16">
-          {/* Grid de 2 colunas no desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {/* ============================================
-                COLUNA ESQUERDA: Informações
-                ============================================ */}
+            {/* Left Column */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-primary-900">
                 {siteConfig.name}
               </h3>
               <p className="text-primary-600 max-w-md">
-                {siteConfig.title} specializing in enterprise SaaS, design
+                {t("site.title")} specializing in enterprise SaaS, design
                 systems, and B2B applications.
               </p>
 
-              {/* Links sociais */}
+              {/* Social Links */}
               <div className="flex items-center gap-2 pt-2">
                 {siteConfig.email && (
                   <a
@@ -69,17 +75,15 @@ export function Footer() {
               </div>
             </div>
 
-            {/* ============================================
-                COLUNA DIREITA: Links rápidos
-                ============================================ */}
+            {/* Right Column */}
             <div className="grid grid-cols-2 gap-8">
-              {/* Navegação */}
+              {/* Navigation */}
               <div>
                 <h4 className="font-semibold text-primary-900 mb-4">
                   Navigation
                 </h4>
                 <ul className="space-y-1">
-                  {siteConfig.navigation.mainMenu.map((item) => (
+                  {navItems.map((item) => (
                     <li key={item.href}>
                       <Link
                         href={item.href}
@@ -92,7 +96,7 @@ export function Footer() {
                 </ul>
               </div>
 
-              {/* Recursos */}
+              {/* Resources */}
               <div>
                 <h4 className="font-semibold text-primary-900 mb-4">
                   Resources
@@ -106,7 +110,7 @@ export function Footer() {
                         rel="noopener noreferrer"
                         className="inline-block py-2 text-primary-600 hover:text-accent-500 transition-colors min-h-[44px] flex items-center"
                       >
-                        Resume
+                        {t("nav.resume")}
                       </a>
                     </li>
                   )}
@@ -118,7 +122,7 @@ export function Footer() {
                         rel="noopener noreferrer"
                         className="inline-block py-2 text-primary-600 hover:text-accent-500 transition-colors min-h-[44px] flex items-center"
                       >
-                        LinkedIn
+                        {t("nav.linkedin")}
                       </a>
                     </li>
                   )}
@@ -127,12 +131,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* ============================================
-              LINHA DE COPYRIGHT (embaixo)
-              ============================================ */}
+          {/* Copyright */}
           <div className="border-t border-primary-200 mt-12 pt-8 text-center md:text-left">
             <p className="text-sm text-primary-500">
-              © {currentYear} {siteConfig.name}. All rights reserved.
+              © {currentYear} {siteConfig.name}. {t("footer.copyright")}
             </p>
           </div>
         </div>
