@@ -20,6 +20,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          clean: true
+
+      - name: Verify repository files
+        run: |
+          echo "=== Current directory ==="
+          pwd
+          echo ""
+          echo "=== All files in repo ==="
+          ls -la
+          echo ""
+          echo "=== i18n folder check ==="
+          if [ -d "i18n" ]; then
+            echo "✅ i18n folder EXISTS"
+            ls -la i18n/
+          else
+            echo "❌ i18n folder MISSING!"
+            echo "This should not happen - files are in git!"
+            exit 1
+          fi
+          echo ""
+          echo "=== next.config.ts check ==="
+          if [ -f "next.config.ts" ]; then
+            echo "✅ next.config.ts EXISTS"
+            head -5 next.config.ts
+          else
+            echo "❌ next.config.ts MISSING!"
+            exit 1
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
