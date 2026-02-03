@@ -6,42 +6,18 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Sparkles, Code2, Building2, ChevronDown } from "lucide-react";
+import { ArrowRight, Briefcase, Code2, Building2, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/content/site-config";
 import { getImagePath } from "@/lib/image-path";
 import { Link } from "@/i18n/routing";
-import { cn } from "@/lib/utils";
 
-function TrustBadge({
-  icon,
-  gradient,
-  label,
-  sublabel,
-}: {
-  icon: React.ReactNode;
-  gradient: string;
-  label: string;
-  sublabel: string;
-}) {
-  return (
-    <div className="inline-flex items-center gap-3 px-5 py-3 bg-white rounded-2xl border-2 border-gray-100 shadow-md hover:shadow-xl transition-shadow">
-      <div
-        className={cn(
-          "w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center",
-          gradient
-        )}
-      >
-        {icon}
-      </div>
-      <div>
-        <div className="text-sm font-bold text-gray-900">{label}</div>
-        <div className="text-xs text-gray-500">{sublabel}</div>
-      </div>
-    </div>
-  );
-}
+const trustBadges = [
+  { icon: Briefcase, label: "7+ years", sublabel: "Experience" },
+  { icon: Building2, label: "IBM", sublabel: "Enterprise SaaS" },
+  { icon: Code2, label: "Python + JS", sublabel: "Technical" },
+];
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -145,25 +121,21 @@ export function HeroSection() {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap gap-4">
-              <TrustBadge
-                icon={<Sparkles className="w-6 h-6 text-white" />}
-                gradient="from-primary-500 to-primary-600"
-                label="7+ years"
-                sublabel="Experience"
-              />
-              <TrustBadge
-                icon={<Building2 className="w-6 h-6 text-white" />}
-                gradient="from-accent-500 to-accent-600"
-                label="IBM"
-                sublabel="Enterprise SaaS"
-              />
-              <TrustBadge
-                icon={<Code2 className="w-6 h-6 text-white" />}
-                gradient="from-purple-500 to-purple-600"
-                label="Python + JS"
-                sublabel="Technical"
-              />
+            <div className="flex flex-wrap gap-3">
+              {trustBadges.map((badge) => (
+                <div
+                  key={badge.label}
+                  className="flex items-center gap-3 px-4 py-2.5 bg-white border border-gray-200 rounded-xl shadow-sm"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">
+                    <badge.icon className="w-4 h-4 text-gray-600" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-900">{badge.label}</div>
+                    <div className="text-xs text-gray-500">{badge.sublabel}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
