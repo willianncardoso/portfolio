@@ -19,7 +19,7 @@ export function CasesGridSection() {
   return (
     <section id="work" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-white to-gray-50">
       <Container>
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-primary-50 to-accent-50 text-primary-700 text-sm font-bold rounded-full border border-primary-200 mb-6">
             {t("title")}
           </span>
@@ -28,7 +28,7 @@ export function CasesGridSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
           {allCases.map((caseStudy, index) => (
             <Link
               key={caseStudy.id}
@@ -36,7 +36,7 @@ export function CasesGridSection() {
               className="group block"
             >
               {/* Image with glow hover effect */}
-              <div className="relative mb-8">
+              <div className="relative mb-10">
                 {/* Glow effect behind card */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-[28px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

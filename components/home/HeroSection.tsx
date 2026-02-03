@@ -56,8 +56,8 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-accent-400/25 to-pink-400/25 rounded-full blur-3xl animate-blob animation-delay-2000" aria-hidden="true" />
       <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-300/20 to-accent-300/20 rounded-full blur-3xl animate-blob animation-delay-4000" aria-hidden="true" />
 
-      <Container className="relative z-10 py-24 md:py-32">
-        <div className="grid md:grid-cols-[1.2fr,0.8fr] gap-12 lg:gap-16 items-center">
+      <Container className="relative z-10 py-24 md:py-32 lg:py-40">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Content */}
           <div className="max-w-3xl">
             {/* Status badge with pulse */}
@@ -168,7 +168,7 @@ export function HeroSection() {
           </div>
 
           {/* Right: Photo with decorative elements */}
-          <div className="relative hidden md:flex justify-center">
+          <div className="relative hidden lg:flex justify-center">
             {/* Main photo */}
             <div className="relative z-10 max-w-sm lg:max-w-md w-full">
               <div className="aspect-square relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl">
@@ -193,7 +193,7 @@ export function HeroSection() {
       </Container>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce hidden md:block" aria-hidden="true">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block" aria-hidden="true">
         <ChevronDown className="w-8 h-8 text-gray-400" />
       </div>
     </section>
