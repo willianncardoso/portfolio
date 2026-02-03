@@ -60,7 +60,7 @@ export function CaseSidebar({ projectName, sections }: CaseSidebarProps) {
 
   return (
     <nav
-      className="hidden lg:block fixed left-6 top-1/2 -translate-y-1/2 z-50"
+      className="hidden xl:block fixed xl:left-4 2xl:left-6 top-1/2 -translate-y-1/2 z-50"
       aria-label="Case study sections"
     >
       <div
