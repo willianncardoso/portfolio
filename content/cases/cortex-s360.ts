@@ -149,5 +149,160 @@ export const cortexCase: CaseStudy = {
     ],
   },
 
+  // ============================================
+  // RESTRUCTURED SECTIONS
+  // ============================================
+
+  sections: [
+    { id: "background", number: "01", title: "Background" },
+    { id: "why-redesign", number: "02", title: "Why Redesign" },
+    { id: "key-decisions", number: "03", title: "Key Decisions" },
+    { id: "impact", number: "04", title: "Impact" },
+    { id: "reflection", number: "05", title: "Reflection" },
+  ],
+
+  background: {
+    aboutProject: {
+      title: "About Cortex S360",
+      description:
+        "Cortex S360 is IBM's field service dispatch platform used by command center operators to assign technical service calls to field technicians across Brazil and LATAM. The platform processes hundreds of service calls daily.",
+      stats: [
+        { value: "100+", label: "Dispatch operators" },
+        { value: "500+", label: "Field technicians" },
+        { value: "24/7", label: "Operations" },
+      ],
+    },
+    myRole: {
+      title: "My Role",
+      description:
+        "I led the complete visual and UX transformation as the platform evolved from fully manual dispatch to an intelligent recommendation engine.",
+      responsibilities: [
+        "UX Research (15 operator interviews)",
+        "Field observation during real shifts",
+        "Visual design system",
+        "Recommendation UI patterns",
+        "Developer collaboration",
+      ],
+      team: "1 Product Designer (me) + 5 Developers + 1 PM",
+      timeline: "12 months (2019-2020)",
+    },
+  },
+
+  whyRedesign: {
+    intro: "Before the redesign, operators manually assigned every service call with limited information. This created a high-stress environment with frequent errors.",
+    problems: [
+      {
+        number: "01",
+        title: "Minutes per decision",
+        description:
+          "Operators spent valuable time manually evaluating technician options for each call.",
+      },
+      {
+        number: "02",
+        title: "Best-guess assignments",
+        description:
+          "Without complete data, operators made suboptimal decisions that affected SLA compliance.",
+      },
+      {
+        number: "03",
+        title: "High-stakes pressure",
+        description:
+          "Missing SLA deadlines meant financial penalties. Operators worked under constant stress.",
+      },
+      {
+        number: "04",
+        title: "Operator burnout",
+        description:
+          "Constant high-pressure decisions with limited data led to sick days and turnover.",
+      },
+    ],
+  },
+
+  keyDecisions: [
+    {
+      number: "01",
+      title: "Trust Through Transparency",
+      problem:
+        "Operators resisted automation because they didn't understand WHY the system recommended each technician",
+      solution:
+        "Visible reasoning badges: 'Closest', 'Has parts', 'Expert in issue type', 'Available now'",
+      tradeOff: "More UI complexity to show reasoning",
+      outcome:
+        "Operators trusted and adopted recommendations because they could verify the logic",
+    },
+    {
+      number: "02",
+      title: "Playful Color Palette for Stress Reduction",
+      problem:
+        "Enterprise tools are typically dark and serious, but operators worked 8-hour high-stress shifts",
+      solution:
+        "Intentionally chose pastel tones (soft blues, pinks, yellows) to make the interface feel less heavy",
+      tradeOff: "Risked looking 'unprofessional' compared to typical enterprise tools",
+      outcome:
+        "Operators reported the tool felt 'easier' and 'less stressful' during long shifts",
+    },
+    {
+      number: "03",
+      title: "Quick Reassignment with Trade-off Visibility",
+      problem:
+        "Operators sometimes needed to override recommendations but couldn't see consequences",
+      solution:
+        "Drag-and-drop reassignment with real-time impact display ('This will delay by 15 minutes but matches expertise better')",
+      tradeOff: "Required real-time calculation engine integration",
+      outcome:
+        "Operators felt empowered to override when needed while understanding consequences",
+    },
+  ],
+
+  impact: {
+    headline: "The tool became less stressful and more efficient",
+    metrics: [
+      {
+        value: "~BRL 3M",
+        label: "Annual savings",
+        description: "Improved efficiency and reduced SLA violations",
+      },
+      {
+        value: "100+",
+        label: "Operators served",
+        description: "Command center dispatchers using the platform daily",
+      },
+      {
+        value: "15",
+        label: "User interviews",
+        description: "Deep research with real operators during live shifts",
+      },
+    ],
+    quote: {
+      text: "The colors make a difference. It's less heavy during a long shift.",
+      author: "Command Center Operator",
+    },
+  },
+
+  reflection: {
+    takeaways: [
+      {
+        title: "Trust is the hardest UX problem in automation",
+        description:
+          "Operators didn't resist automation—they resisted OPAQUE automation. Transparency enabled adoption.",
+      },
+      {
+        title: "'Serious' doesn't mean 'boring'",
+        description:
+          "Taking a risk with playful colors paid off. Visual design can change how people feel about their work.",
+      },
+      {
+        title: "Former developers make better designers for technical products",
+        description:
+          "My engineering background let me design within constraints and speak the dev team's language.",
+      },
+    ],
+    nextSteps: [
+      "AI-powered prediction of technician availability",
+      "Mobile app for field technicians to update status",
+      "Integration with customer notification system",
+    ],
+  },
+
   nextCaseId: "e-config",
 };

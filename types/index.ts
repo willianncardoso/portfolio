@@ -27,6 +27,13 @@ export type {
   CaseContent,
   CasePreview,
   ProcessStep,
+  CaseSidebarSection,
+  CaseBackground,
+  CaseWhyRedesign,
+  CaseDesignStrategy,
+  CaseKeyDecision,
+  CaseImpact,
+  CaseReflection,
 } from "./case";
 
 // Se adicionar mais arquivos de tipos no futuro, exporte aqui também

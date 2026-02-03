@@ -193,6 +193,98 @@ export interface ProcessStep {
 }
 
 /**
+ * SIDEBAR SECTION
+ * Section entry for sticky sidebar navigation
+ */
+export interface CaseSidebarSection {
+  id: string;
+  number: string;
+  title: string;
+}
+
+/**
+ * BACKGROUND - About the project/company
+ */
+export interface CaseBackground {
+  aboutProject: {
+    title: string;
+    description: string;
+    stats: CaseMetric[];
+  };
+  myRole: {
+    title: string;
+    description: string;
+    responsibilities: string[];
+    team: string;
+    timeline: string;
+  };
+}
+
+/**
+ * WHY REDESIGN - Problem framing
+ */
+export interface CaseWhyRedesign {
+  intro: string;
+  problems: {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+  conclusion?: string;
+}
+
+/**
+ * DESIGN STRATEGY - Methodology (optional)
+ */
+export interface CaseDesignStrategy {
+  intro: string;
+  insight?: string;
+  approach?: string;
+  phases?: {
+    title: string;
+    description: string;
+  }[];
+}
+
+/**
+ * KEY DESIGN DECISION - Decision with trade-off
+ */
+export interface CaseKeyDecision {
+  number: string;
+  title: string;
+  problem: string;
+  solution: string;
+  tradeOff: string;
+  outcome: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+/**
+ * IMPACT - Metrics + quotes
+ */
+export interface CaseImpact {
+  headline: string;
+  metrics: (CaseMetric & { description?: string })[];
+  ecosystemImpact?: (CaseMetric & { description?: string })[];
+  quote?: {
+    text: string;
+    author: string;
+  };
+}
+
+/**
+ * REFLECTION - Takeaways + next steps
+ */
+export interface CaseReflection {
+  takeaways: {
+    title: string;
+    description: string;
+  }[];
+  nextSteps: string[];
+}
+
+/**
  * CASE STUDY COMPLETO
  * Estrutura completa de um case study
  */
@@ -241,6 +333,31 @@ export interface CaseStudy {
 
   /** Etapas do processo visual (seção "My Process") */
   process?: ProcessStep[];
+
+  // ============================================
+  // RESTRUCTURED SECTIONS (Xiaoyang-style)
+  // ============================================
+
+  /** Sidebar navigation sections */
+  sections?: CaseSidebarSection[];
+
+  /** Background: about the project + my role */
+  background?: CaseBackground;
+
+  /** Why Redesign: problem framing */
+  whyRedesign?: CaseWhyRedesign;
+
+  /** Design Strategy: methodology (optional) */
+  designStrategy?: CaseDesignStrategy;
+
+  /** Key Design Decisions with trade-offs */
+  keyDecisions?: CaseKeyDecision[];
+
+  /** Impact: metrics + quotes */
+  impact?: CaseImpact;
+
+  /** Reflection: takeaways + next steps */
+  reflection?: CaseReflection;
 
   // ============================================
   // NAVEGAÇÃO

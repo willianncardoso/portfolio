@@ -157,5 +157,181 @@ export const econfigCase: CaseStudy = {
     ],
   },
 
+  // ============================================
+  // RESTRUCTURED SECTIONS
+  // ============================================
+
+  sections: [
+    { id: "background", number: "01", title: "Background" },
+    { id: "why-redesign", number: "02", title: "Why Redesign" },
+    { id: "design-strategy", number: "03", title: "Design Strategy" },
+    { id: "key-decisions", number: "04", title: "Key Decisions" },
+    { id: "impact", number: "05", title: "Impact" },
+    { id: "reflection", number: "06", title: "Reflection" },
+  ],
+
+  background: {
+    aboutProject: {
+      title: "About E-Config",
+      description:
+        "E-Config is IBM's internal hardware configuration tool used by sales engineers globally to build custom server, storage, and networking configurations. Every hardware deal at IBM flows through this tool.",
+      stats: [
+        { value: "100K+", label: "Configurations/year" },
+        { value: "1000s", label: "Component options" },
+        { value: "Global", label: "Sales teams" },
+      ],
+    },
+    myRole: {
+      title: "My Role",
+      description:
+        "I used service design methodology to map the end-to-end configuration journey and redesign the entire experience.",
+      responsibilities: [
+        "Service blueprint creation",
+        "User shadowing (12 sessions)",
+        "Wizard pattern design",
+        "Validation engine UX",
+        "Template library design",
+      ],
+      team: "2 designers + 3 developers + 1 PM",
+      timeline: "18 months (2021-2022)",
+    },
+  },
+
+  whyRedesign: {
+    intro: "Configuration errors were costing IBM millions in returns, delays, and customer dissatisfaction. The existing tool worked against users instead of helping them.",
+    problems: [
+      {
+        number: "01",
+        title: "25% error rate",
+        description:
+          "Incompatible components, missing parts, incorrect quantities—all caught downstream by manufacturing.",
+      },
+      {
+        number: "02",
+        title: "Tribal knowledge dependency",
+        description:
+          "Expert users had mental models new users couldn't access. 'If you pick this processor, you need 4 DIMMs'—but nothing in the tool said that.",
+      },
+      {
+        number: "03",
+        title: "Fragmented workflow",
+        description:
+          "Users jumped between config tool, PDF specs, pricing spreadsheets, and email threads for a single order.",
+      },
+      {
+        number: "04",
+        title: "Regional workarounds",
+        description:
+          "Different teams had their own unofficial cheat sheets, leading to inconsistent processes.",
+      },
+    ],
+  },
+
+  designStrategy: {
+    intro: "I started with service design—mapping the entire configuration-to-order journey, not just the tool interface.",
+    insight:
+      "The service blueprint revealed that 40% of user pain was OUTSIDE the tool—in email threads, PDF lookups, and expert consultations. By bringing that context into the tool, we solved problems the original brief didn't mention.",
+  },
+
+  keyDecisions: [
+    {
+      number: "01",
+      title: "Decision-Based Wizard Steps",
+      problem:
+        "First prototype organized steps by component category (processors, memory, storage)—users hated it",
+      solution:
+        "Reorganized by decision logic: Use case → Platform → Compute → Storage → Network",
+      tradeOff: "Required different data model than the database structure",
+      outcome:
+        "Completion rates jumped immediately when steps matched mental models",
+    },
+    {
+      number: "02",
+      title: "Real-Time Validation Engine",
+      problem:
+        "Errors only caught after submission, causing days of back-and-forth with manufacturing",
+      solution:
+        "Every selection triggers instant compatibility checks. Invalid options are grayed out with explanations.",
+      tradeOff: "Required integration with complex product rules database",
+      outcome:
+        "60% reduction in configuration errors—problems caught at decision time, not downstream",
+    },
+    {
+      number: "03",
+      title: "Templates as Onboarding Tool",
+      problem: "New users took weeks to configure independently",
+      solution:
+        "Pre-built templates for top 20 use cases, maintained by senior engineers",
+      tradeOff: "Required governance process for template curation",
+      outcome:
+        "New sales engineers productive on day one by starting from templates",
+    },
+    {
+      number: "04",
+      title: "Inline Specifications",
+      problem:
+        "Users constantly switched to PDF spec sheets and external docs",
+      solution:
+        "Technical specs, compatibility notes, and pricing embedded directly in the flow",
+      tradeOff: "More information density in the interface",
+      outcome: "Eliminated context-switching, 30% faster configuration time",
+    },
+  ],
+
+  impact: {
+    headline: "Preventing errors is exponentially more valuable than catching them",
+    metrics: [
+      {
+        value: "60%",
+        label: "Fewer errors",
+        description: "Real-time validation prevents mistakes at decision time",
+      },
+      {
+        value: "30%",
+        label: "Faster configuration",
+        description:
+          "Templates and inline specs eliminate context-switching",
+      },
+      {
+        value: "100K+",
+        label: "Configs/year",
+        description: "Full global volume with higher accuracy",
+      },
+    ],
+    ecosystemImpact: [
+      {
+        value: "0",
+        label: "Regional workarounds",
+        description:
+          "Standardized process replaced patchwork of cheat sheets",
+      },
+    ],
+  },
+
+  reflection: {
+    takeaways: [
+      {
+        title: "Service design reveals what UI design can't",
+        description:
+          "If I had only redesigned the interface, I would have made a prettier version of a broken process. The blueprint showed where to focus.",
+      },
+      {
+        title: "Wizard steps must match mental models, not data models",
+        description:
+          "Organizing by component category failed. Organizing by decision logic succeeded.",
+      },
+      {
+        title: "Preventing errors is cheaper than catching them",
+        description:
+          "Every error that reached manufacturing cost 3-5 days. Real-time validation removed that entirely.",
+      },
+    ],
+    nextSteps: [
+      "AI-suggested configurations based on deal history",
+      "Integration with CRM for automated pricing",
+      "Mobile review app for manager approvals",
+    ],
+  },
+
   nextCaseId: "igua",
 };

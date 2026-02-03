@@ -2,6 +2,7 @@
  * ============================================
  * CASE STUDY PAGE (Localized)
  * ============================================
+ * Uses restructured Xiaoyang-style layout with sidebar navigation
  */
 
 import { notFound } from "next/navigation";
@@ -11,14 +12,14 @@ import { allCases } from "@/content/cases";
 import { siteConfig } from "@/content/site-config";
 import { routing } from "@/i18n/routing";
 import { CaseHero } from "@/components/case/CaseHero";
-import { CaseMetrics } from "@/components/case/CaseMetrics";
-import { CaseOverview } from "@/components/case/CaseOverview";
-import { CaseChallenge } from "@/components/case/CaseChallenge";
+import { CaseSidebar } from "@/components/case/CaseSidebar";
+import { CaseBackground } from "@/components/case/CaseBackground";
+import { CaseWhyRedesign } from "@/components/case/CaseWhyRedesign";
+import { CaseDesignStrategy } from "@/components/case/CaseDesignStrategy";
+import { CaseKeyDecisions } from "@/components/case/CaseKeyDecisions";
+import { CaseImpact } from "@/components/case/CaseImpact";
+import { CaseReflection } from "@/components/case/CaseReflection";
 import { ProcessSection } from "@/components/case/ProcessSection";
-import { CaseApproach } from "@/components/case/CaseApproach";
-import { CaseSolution } from "@/components/case/CaseSolution";
-import { CaseResults } from "@/components/case/CaseResults";
-import { CaseLearnings } from "@/components/case/CaseLearnings";
 import { CaseNavigation } from "@/components/case/CaseNavigation";
 
 // Generate static params for all locales and cases
@@ -100,19 +101,64 @@ export default async function CasePage({ params }: CasePageProps) {
   }
 
   return (
-    <main>
-      <CaseHero caseStudy={caseStudy} />
-      <CaseMetrics metrics={caseStudy.metrics} />
-      <CaseOverview content={caseStudy.content.overview} />
-      <CaseChallenge challenge={caseStudy.content.challenge} />
-      {caseStudy.process && caseStudy.process.length > 0 && (
-        <ProcessSection steps={caseStudy.process} />
+    <>
+      {/* Sticky sidebar navigation */}
+      {caseStudy.sections && (
+        <CaseSidebar sections={caseStudy.sections} />
       )}
-      <CaseApproach steps={caseStudy.content.approach} />
-      <CaseSolution solution={caseStudy.content.solution} heroImage={caseStudy.images.hero} heroImageAlt={`${caseStudy.title} - Final Solution`} />
-      <CaseResults results={caseStudy.content.results} />
-      <CaseLearnings learnings={caseStudy.content.learnings} />
-      <CaseNavigation nextCaseId={caseStudy.nextCaseId} />
-    </main>
+
+      <main>
+        <CaseHero caseStudy={caseStudy} />
+
+        {/* 01 Background */}
+        {caseStudy.background && (
+          <section id="background">
+            <CaseBackground background={caseStudy.background} />
+          </section>
+        )}
+
+        {/* 02 Why Redesign */}
+        {caseStudy.whyRedesign && (
+          <section id="why-redesign">
+            <CaseWhyRedesign data={caseStudy.whyRedesign} />
+          </section>
+        )}
+
+        {/* 03 Design Strategy (optional) */}
+        {caseStudy.designStrategy && (
+          <section id="design-strategy">
+            <CaseDesignStrategy data={caseStudy.designStrategy} />
+          </section>
+        )}
+
+        {/* My Process timeline */}
+        {caseStudy.process && caseStudy.process.length > 0 && (
+          <ProcessSection steps={caseStudy.process} />
+        )}
+
+        {/* 04 Key Design Decisions */}
+        {caseStudy.keyDecisions && (
+          <section id="key-decisions">
+            <CaseKeyDecisions decisions={caseStudy.keyDecisions} />
+          </section>
+        )}
+
+        {/* 05 Impact */}
+        {caseStudy.impact && (
+          <section id="impact">
+            <CaseImpact data={caseStudy.impact} />
+          </section>
+        )}
+
+        {/* 06 Reflection */}
+        {caseStudy.reflection && (
+          <section id="reflection">
+            <CaseReflection data={caseStudy.reflection} />
+          </section>
+        )}
+
+        <CaseNavigation nextCaseId={caseStudy.nextCaseId} />
+      </main>
+    </>
   );
 }

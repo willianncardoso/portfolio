@@ -48,19 +48,19 @@ export function ProcessSection({
                 </div>
 
                 {/* Title */}
-                <h4 className="font-bold text-gray-900 mb-1 text-sm uppercase tracking-wide">
+                <h4 className="font-bold text-gray-900 mb-1 text-base uppercase tracking-wide">
                   {step.title}
                 </h4>
 
                 {/* Duration */}
-                <span className="text-xs text-gray-500 mb-3 font-medium">
+                <span className="text-sm text-gray-500 mb-3 font-medium">
                   {step.duration}
                 </span>
 
                 {/* Bullets */}
-                <ul className="text-xs text-gray-600 space-y-1">
+                <ul className="text-sm text-gray-600 space-y-1.5">
                   {step.bullets.map((bullet, i) => (
-                    <li key={i} className="leading-tight">
+                    <li key={i} className="leading-snug">
                       {bullet}
                     </li>
                   ))}
@@ -95,10 +95,10 @@ export function ProcessSection({
 
               {/* Right: Content */}
               <div className="flex-1 pb-4">
-                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wide">
+                <h4 className="font-bold text-gray-900 text-base uppercase tracking-wide">
                   {step.title}
                 </h4>
-                <span className="text-xs text-gray-500 font-medium">
+                <span className="text-sm text-gray-500 font-medium">
                   {step.duration}
                 </span>
                 <ul className="text-sm text-gray-600 mt-2 space-y-1">
