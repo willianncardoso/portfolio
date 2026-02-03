@@ -6,7 +6,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Briefcase, Code2, Building2, ChevronDown } from "lucide-react";
+import { ArrowRight, Sparkles, Code2, Building2, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/content/site-config";
@@ -14,9 +14,9 @@ import { getImagePath } from "@/lib/image-path";
 import { Link } from "@/i18n/routing";
 
 const trustBadges = [
-  { icon: Briefcase, label: "7+ years", sublabel: "Experience" },
-  { icon: Building2, label: "IBM", sublabel: "Enterprise SaaS" },
-  { icon: Code2, label: "Python + JS", sublabel: "Technical" },
+  { icon: Sparkles, label: "7+ years", sublabel: "Experience", gradient: "from-blue-500 to-blue-600" },
+  { icon: Building2, label: "IBM", sublabel: "Enterprise SaaS", gradient: "from-cyan-500 to-cyan-600" },
+  { icon: Code2, label: "Python + JS", sublabel: "Technical", gradient: "from-purple-500 to-purple-600" },
 ];
 
 export function HeroSection() {
@@ -127,8 +127,8 @@ export function HeroSection() {
                   key={badge.label}
                   className="flex items-center gap-3 px-4 py-2.5 bg-white border border-gray-200 rounded-xl shadow-sm"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">
-                    <badge.icon className="w-4 h-4 text-gray-600" />
+                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${badge.gradient} flex items-center justify-center shrink-0`}>
+                    <badge.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <div className="text-sm font-bold text-gray-900">{badge.label}</div>
