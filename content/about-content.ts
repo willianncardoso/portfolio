@@ -2,7 +2,7 @@
  * ============================================
  * CONTEÚDO DA PÁGINA ABOUT (SOBRE MIM)
  * ============================================
- *
+ * 
  * Todos os textos da página "About" estão aqui.
  * Esta é a página onde você conta sua história profissional em mais detalhes.
  *
