@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+// import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher"; // Temporarily disabled for English-only launch
 import { Link } from "@/i18n/routing";
 import { siteConfig } from "@/content/site-config";
 import { cn } from "@/lib/utils";
@@ -65,7 +65,7 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl md:text-2xl font-bold text-primary-900 hover:text-accent-500 transition-colors"
+            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary-800 to-accent-600 bg-clip-text text-transparent hover:from-accent-600 hover:to-primary-800 transition-all duration-300"
           >
             {siteConfig.name}
           </Link>
@@ -100,8 +100,8 @@ export function Header() {
             {/* Separator */}
             <div className="h-6 w-px bg-primary-200" />
 
-            {/* Language Switcher */}
-            <LanguageSwitcher />
+            {/* Language Switcher - Temporarily disabled for English-only launch */}
+            {/* <LanguageSwitcher /> */}
 
             {/* LinkedIn */}
             {siteConfig.links.linkedin && (
@@ -130,7 +130,8 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-3 md:hidden">
-            <LanguageSwitcher />
+            {/* Language Switcher - Temporarily disabled */}
+            {/* <LanguageSwitcher /> */}
             <button
               className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary-700 hover:text-accent-500 hover:bg-accent-50 rounded-lg transition-all duration-200"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
