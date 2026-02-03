@@ -7,7 +7,6 @@
 
 import { Mail, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { siteConfig } from "@/content/site-config";
@@ -16,33 +15,33 @@ export function ContactSection() {
   const t = useTranslations("contact");
 
   return (
-    <Section id="contact" spacing="xl" background="gray">
+    <Section id="contact" spacing="lg" background="gray">
       <Container>
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-900">
+        <div className="max-w-3xl mx-auto text-center space-y-8">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-900 tracking-tight">
             {t("title")}
           </h2>
-          <p className="text-lg text-primary-600">{t("description")}</p>
+          <p className="text-xl text-primary-600 leading-relaxed">
+            {t("description")}
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button
+            <a
               href={`mailto:${siteConfig.email}`}
-              size="lg"
-              className="bg-gradient-to-r from-accent-500 to-purple-600 text-white hover:from-accent-600 hover:to-purple-700 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gray-900 text-white rounded-2xl font-bold text-lg hover:bg-gray-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
             >
-              <Mail className="mr-2" size={20} aria-hidden="true" />
+              <Mail className="w-5 h-5" />
               {t("emailButton")}
-            </Button>
-            <Button
+            </a>
+            <a
               href={siteConfig.links.linkedin}
-              external
-              variant="secondary"
-              size="lg"
-              className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0A66C2] text-white rounded-2xl font-bold text-lg hover:bg-[#004182] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
             >
-              <Linkedin className="mr-2" size={20} aria-hidden="true" />
+              <Linkedin className="w-5 h-5" />
               {t("linkedinButton")}
-            </Button>
+            </a>
           </div>
 
           <p className="text-sm text-primary-500 pt-4">{t("additionalInfo")}</p>

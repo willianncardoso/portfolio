@@ -1,25 +1,11 @@
 /**
- * ============================================
  * COMPONENTE: CaseChallenge
- * ============================================
- *
- * Seção que descreve o problema/desafio do projeto.
- * Mostra descrição + lista de bullet points + imagem opcional.
- *
- * PROPS:
- * - challenge: CaseChallenge (description, points, image?, imageAlt?)
- *
- * LAYOUT:
- * - Título da seção "The Challenge"
- * - Descrição do problema
- * - Lista de pontos com ícones AlertCircle
- * - Imagem opcional (se fornecida)
+ * Seção que descreve o problema/desafio do projeto
  */
 
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
-import { SectionTitle } from "@/components/ui/SectionTitle";
 import { CaseChallenge as CaseChallengeType } from "@/types";
 
 interface CaseChallengeProps {
@@ -28,31 +14,34 @@ interface CaseChallengeProps {
 
 export function CaseChallenge({ challenge }: CaseChallengeProps) {
   return (
-    <Section spacing="xl" background="gray">
+    <Section spacing="lg" background="gray">
       <Container size="md">
-        <SectionTitle align="left">The Challenge</SectionTitle>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
+          The Challenge
+        </h2>
 
-        {/* Descrição */}
-        <p className="text-base md:text-lg text-primary-700 leading-relaxed mb-8 max-w-3xl">
+        <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl">
           {challenge.description}
         </p>
 
-        {/* Lista de pontos do problema */}
-        <ol className="space-y-4 mb-12">
+        {/* Key points - numbered with gradient badges */}
+        <div className="space-y-6 mb-12">
           {challenge.points.map((point, index) => (
-            <li
-              key={index}
-              className="flex items-start gap-4 text-base md:text-lg text-primary-700"
-            >
-              <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 text-white font-bold flex items-center justify-center text-sm">
+            <div key={index} className="flex gap-6 items-start group">
+              {/* Number badge */}
+              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 text-white font-black text-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                 {index + 1}
-              </span>
-              <span className="flex-1 pt-1">{point}</span>
-            </li>
-          ))}
-        </ol>
+              </div>
 
-        {/* Imagem opcional */}
+              {/* Point text */}
+              <p className="flex-1 text-lg text-gray-700 leading-relaxed pt-3">
+                {point}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Optional image */}
         {challenge.image && (
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
             <Image

@@ -50,10 +50,10 @@ interface SectionProps {
 
 const spacingStyles = {
   none: "",
-  sm: "py-12", // 48px
-  md: "py-16 md:py-20", // 64px mobile, 80px desktop
-  lg: "py-20 md:py-28", // 80px mobile, 112px desktop
-  xl: "py-24 md:py-32", // 96px mobile, 128px desktop
+  sm: "py-16 md:py-20", // 64px mobile, 80px desktop
+  md: "py-20 md:py-28 lg:py-32", // 80px → 112px → 128px
+  lg: "py-24 md:py-32 lg:py-40", // 96px → 128px → 160px
+  xl: "py-28 md:py-36 lg:py-48", // 112px → 144px → 192px
 };
 
 const backgroundStyles = {
