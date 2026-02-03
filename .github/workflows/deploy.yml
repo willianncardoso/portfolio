@@ -24,18 +24,35 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: 'npm'
+          node-version: '20.18.0'
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Clean install dependencies
+        run: |
+          npm cache clean --force
+          rm -rf node_modules .next out
+          npm ci
+
+      - name: Debug environment
+        run: |
+          echo "Node version: $(node --version)"
+          echo "NPM version: $(npm --version)"
+          echo "Current directory: $(pwd)"
+          echo "Files in i18n:"
+          ls -la i18n/
+          echo "next.config.ts exists:"
+          ls -la next.config.ts
+          echo "Package versions:"
+          npm list next next-intl
 
       - name: Build with Next.js
+        env:
+          NODE_ENV: production
+          NEXT_TELEMETRY_DISABLED: 1
         run: npm run build
 
       - name: Upload artifact
