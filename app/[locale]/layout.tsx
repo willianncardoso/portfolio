@@ -92,9 +92,9 @@ export async function generateMetadata({
       },
     },
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon.ico",
-      apple: "/apple-touch-icon.png",
+      icon: [
+        { url: "/portfolio/favicon.svg", type: "image/svg+xml" },
+      ],
     },
     robots: {
       index: true,
