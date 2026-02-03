@@ -55,7 +55,7 @@ export function HeroSection() {
                 <>
                   {t("headline").split("actually")[0]}
                   <span className="relative inline-block">
-                    <span className="bg-gradient-to-r from-primary-700 via-purple-600 to-accent-500 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                       actually
                     </span>
                     {/* Gradient underline */}
