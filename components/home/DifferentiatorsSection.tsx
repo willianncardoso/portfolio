@@ -14,30 +14,26 @@ const items = [
   {
     key: "enterprise" as const,
     icon: Building2,
-    gradient: "from-primary-500 to-primary-600",
-    span: "col-span-1 md:col-span-2 row-span-2",
-    large: true,
+    gradient: "from-indigo-600 to-indigo-700",
+    span: "col-span-1 md:col-span-2",
   },
   {
     key: "code" as const,
     icon: Code2,
-    gradient: "from-accent-500 to-accent-600",
-    span: "col-span-1 md:col-span-2 row-span-1",
-    large: false,
+    gradient: "from-teal-600 to-cyan-700",
+    span: "col-span-1 md:col-span-2",
   },
   {
     key: "research" as const,
     icon: Brain,
-    gradient: "from-purple-500 to-purple-600",
-    span: "col-span-1 row-span-1",
-    large: false,
+    gradient: "from-purple-600 to-violet-700",
+    span: "col-span-1 md:col-span-2",
   },
   {
     key: "global" as const,
     icon: Globe,
-    gradient: "from-pink-500 to-pink-600",
-    span: "col-span-1 row-span-1",
-    large: false,
+    gradient: "from-pink-600 to-rose-700",
+    span: "col-span-1 md:col-span-2",
   },
 ];
 
@@ -56,32 +52,26 @@ export function DifferentiatorsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[180px] md:auto-rows-[200px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {items.map((item) => {
             const IconComponent = item.icon;
             return (
               <div
                 key={item.key}
-                className={`${item.span} bg-gradient-to-br ${item.gradient} rounded-3xl p-8 text-white shadow-lg hover:shadow-2xl transition-shadow overflow-hidden relative group`}
+                className={`bg-gradient-to-br ${item.gradient} rounded-3xl p-8 text-white shadow-lg hover:shadow-2xl transition-shadow overflow-hidden relative group`}
               >
                 {/* Background decoration */}
-                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" aria-hidden="true" />
 
-                <div className="h-full flex flex-col justify-between relative z-10">
-                  <IconComponent
-                    className={item.large ? "w-12 h-12" : "w-10 h-10"}
-                  />
+                <div className="flex flex-col gap-4 relative z-10">
+                  <IconComponent className="w-10 h-10 drop-shadow-sm" />
                   <div>
-                    <h3
-                      className={`${item.large ? "text-2xl md:text-3xl" : "text-xl"} font-bold mb-2`}
-                    >
+                    <h3 className="text-xl md:text-2xl font-bold mb-2">
                       {t(`items.${item.key}.title`)}
                     </h3>
-                    {item.large && (
-                      <p className="text-white/90 leading-relaxed text-sm md:text-base line-clamp-3">
-                        {t(`items.${item.key}.description`)}
-                      </p>
-                    )}
+                    <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                      {t(`items.${item.key}.description`)}
+                    </p>
                   </div>
                 </div>
               </div>

@@ -64,10 +64,7 @@ export function CasesGridSection() {
                       {caseStudy.metrics[0].value}
                     </div>
                     <div className="text-xs text-gray-600 font-medium">
-                      {caseStudy.metrics[0].label
-                        .split(" ")
-                        .slice(0, 3)
-                        .join(" ")}
+                      {caseStudy.metrics[0].label}
                     </div>
                   </div>
                 )}

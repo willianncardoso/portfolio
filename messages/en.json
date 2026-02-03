@@ -77,17 +77,17 @@
     "journeyTitle": "My Journey",
     "journeyItems": {
       "dev": {
-        "year": "2016",
-        "title": "Started as a Developer",
+        "year": "2018",
+        "title": "Started at IBM",
         "description": "Joined IBM as a JavaScript intern, building internal tools. Learned to think like an engineer, understand technical constraints, and speak the language of development teams."
       },
       "design": {
-        "year": "2018",
+        "year": "2019",
         "title": "Transitioned to UX/UI Design",
         "description": "Discovered my true passion was solving user problems, not just writing code. Made the leap to design while keeping my technical foundation — a combination that became my superpower."
       },
       "senior": {
-        "year": "2020",
+        "year": "2021",
         "title": "Senior Product Designer",
         "description": "Led complete redesigns of enterprise configurators and dashboards. Reduced support tickets by 40%, onboarding time by 60%. Learned to measure impact in business metrics, not just pixels."
       },

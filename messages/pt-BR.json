@@ -77,17 +77,17 @@
     "journeyTitle": "Minha Trajetória",
     "journeyItems": {
       "dev": {
-        "year": "2016",
-        "title": "Começou como Desenvolvedor",
+        "year": "2018",
+        "title": "Começou na IBM",
         "description": "Entrou na IBM como estagiário de JavaScript, construindo ferramentas internas. Aprendeu a pensar como engenheiro, entender restrições técnicas e falar a linguagem dos times de desenvolvimento."
       },
       "design": {
-        "year": "2018",
+        "year": "2019",
         "title": "Transição para UX/UI Design",
         "description": "Descobriu que sua verdadeira paixão era resolver problemas de usuários, não apenas escrever código. Fez a transição para design mantendo sua base técnica — uma combinação que se tornou seu superpoder."
       },
       "senior": {
-        "year": "2020",
+        "year": "2021",
         "title": "Senior Product Designer",
         "description": "Liderou redesigns completos de configuradores enterprise e dashboards. Reduziu tickets de suporte em 40%, tempo de onboarding em 60%. Aprendeu a medir impacto em métricas de negócio, não apenas pixels."
       },
