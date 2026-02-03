@@ -104,7 +104,7 @@ export default async function CasePage({ params }: CasePageProps) {
     <>
       {/* Sticky sidebar navigation */}
       {caseStudy.sections && (
-        <CaseSidebar sections={caseStudy.sections} />
+        <CaseSidebar projectName={caseStudy.title.split(":")[0]} sections={caseStudy.sections} />
       )}
 
       <main>

@@ -35,39 +35,41 @@ export function CasesGridSection() {
               href={`/cases/${caseStudy.id}`}
               className="group block"
             >
-              {/* Image with sophisticated hover */}
-              <div className="aspect-[16/10] relative overflow-hidden rounded-3xl mb-8 shadow-xl">
-                <Image
-                  src={getImagePath(caseStudy.images.cover)}
-                  alt={caseStudy.title}
-                  fill
-                  className="object-cover transition-all duration-700 group-hover:scale-110"
-                />
+              {/* Image with glow hover effect */}
+              <div className="relative mb-8">
+                {/* Glow effect behind card */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-[28px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Subtle overlay always visible */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/0 to-gray-900/0 opacity-60 group-hover:opacity-0 transition-opacity duration-500" />
+                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl shadow-xl group-hover:shadow-2xl transition-shadow duration-500">
+                  <Image
+                    src={getImagePath(caseStudy.images.cover)}
+                    alt={caseStudy.title}
+                    fill
+                    className="object-cover transition-all duration-700 group-hover:scale-105"
+                  />
 
-                {/* Colored overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 via-purple-600/80 to-accent-600/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Subtle bottom gradient for readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-                {/* View CTA */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="px-8 py-4 bg-white text-gray-900 rounded-2xl font-bold text-lg shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    {t("viewCase")} →
+                  {/* View CTA on hover */}
+                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <div className="px-8 py-4 bg-white text-gray-900 rounded-2xl font-bold text-lg shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      {t("viewCase")} &rarr;
+                    </div>
                   </div>
+
+                  {/* Metrics badge */}
+                  {caseStudy.metrics && caseStudy.metrics[0] && (
+                    <div className="absolute top-6 right-6 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg">
+                      <div className="text-2xl font-black text-gray-900">
+                        {caseStudy.metrics[0].value}
+                      </div>
+                      <div className="text-sm text-gray-600 font-medium">
+                        {caseStudy.metrics[0].label}
+                      </div>
+                    </div>
+                  )}
                 </div>
-
-                {/* Metrics badge */}
-                {caseStudy.metrics && caseStudy.metrics[0] && (
-                  <div className="absolute top-6 right-6 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg">
-                    <div className="text-2xl font-black text-primary-600">
-                      {caseStudy.metrics[0].value}
-                    </div>
-                    <div className="text-xs text-gray-600 font-medium">
-                      {caseStudy.metrics[0].label}
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Content */}

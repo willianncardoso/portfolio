@@ -16,11 +16,17 @@ export function CaseImpact({ data }: CaseImpactProps) {
     <Section spacing="md" background="gray">
       <Container size="md">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          Impact
+          {data.sectionTitle || "Impact"}
         </h2>
-        <p className="text-xl text-gray-600 mb-12 max-w-3xl">
+        <p className="text-xl text-gray-600 mb-4 max-w-3xl">
           {data.headline}
         </p>
+        {data.disclaimer && (
+          <p className="text-sm text-gray-500 italic mb-12">
+            * {data.disclaimer}
+          </p>
+        )}
+        {!data.disclaimer && <div className="mb-8" />}
 
         {/* Primary metrics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">

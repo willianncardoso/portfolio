@@ -16,7 +16,7 @@ export function CaseWhyRedesign({ data }: CaseWhyRedesignProps) {
     <Section spacing="md" background="gray">
       <Container size="md">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Why Redesign
+          {data.sectionTitle || "Why Redesign"}
         </h2>
 
         <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl">

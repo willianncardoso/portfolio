@@ -10,7 +10,7 @@ export const iguaCase: CaseStudy = {
   category: "Service Design",
   title: "Iguá Saneamento: Digital Transformation of Customer Service",
   subtitle:
-    "Redesigning the entire customer journey for a water utility company, from service blueprints to a self-service app that cut call center volume by 50%",
+    "Designing the entire customer journey from scratch for a water utility company, from service blueprints to a self-service app",
   cardDescription:
     "Led service design for Iguá's digital transformation, mapping end-to-end customer journeys and delivering a self-service platform that improved satisfaction by 40%",
 
@@ -165,10 +165,10 @@ export const iguaCase: CaseStudy = {
 
   sections: [
     { id: "background", number: "01", title: "Background" },
-    { id: "why-redesign", number: "02", title: "Why Redesign" },
+    { id: "why-redesign", number: "02", title: "The Opportunity" },
     { id: "design-strategy", number: "03", title: "Design Strategy" },
     { id: "key-decisions", number: "04", title: "Key Decisions" },
-    { id: "impact", number: "05", title: "Impact" },
+    { id: "impact", number: "05", title: "Expected Impact" },
     { id: "reflection", number: "06", title: "Reflection" },
   ],
 
@@ -200,7 +200,8 @@ export const iguaCase: CaseStudy = {
   },
 
   whyRedesign: {
-    intro: "Customer service operations were almost entirely analog—creating friction for customers and unsustainable costs for the business.",
+    sectionTitle: "The Opportunity",
+    intro: "Customer service operations were almost entirely analog—creating friction for customers and unsustainable costs for the business. There was no existing digital platform to redesign; we were building from scratch.",
     problems: [
       {
         number: "01",
@@ -283,7 +284,9 @@ export const iguaCase: CaseStudy = {
   ],
 
   impact: {
-    headline: "Trust is the product when you're handling people's money and essential services",
+    sectionTitle: "Expected Impact",
+    headline: "Projected outcomes based on pilot testing and industry benchmarks",
+    disclaimer: "Metrics are projections based on pilot testing and industry benchmarks. I contributed through the initial implementation phase.",
     metrics: [
       {
         value: "40%",

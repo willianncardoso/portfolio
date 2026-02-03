@@ -224,6 +224,8 @@ export interface CaseBackground {
  * WHY REDESIGN - Problem framing
  */
 export interface CaseWhyRedesign {
+  /** Custom section title (defaults to "Why Redesign") */
+  sectionTitle?: string;
   intro: string;
   problems: {
     number: string;
@@ -264,7 +266,11 @@ export interface CaseKeyDecision {
  * IMPACT - Metrics + quotes
  */
 export interface CaseImpact {
+  /** Custom section title (defaults to "Impact") */
+  sectionTitle?: string;
   headline: string;
+  /** Disclaimer for projected/estimated metrics */
+  disclaimer?: string;
   metrics: (CaseMetric & { description?: string })[];
   ecosystemImpact?: (CaseMetric & { description?: string })[];
   quote?: {

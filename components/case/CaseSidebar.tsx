@@ -1,6 +1,6 @@
 /**
  * COMPONENTE: CaseSidebar
- * Sticky sidebar navigation with numbered sections
+ * Sticky sidebar navigation with project name and numbered sections
  * Hidden on mobile, visible on lg+ screens
  */
 
@@ -11,10 +11,11 @@ import { cn } from "@/lib/utils";
 import { CaseSidebarSection } from "@/types";
 
 interface CaseSidebarProps {
+  projectName: string;
   sections: CaseSidebarSection[];
 }
 
-export function CaseSidebar({ sections }: CaseSidebarProps) {
+export function CaseSidebar({ projectName, sections }: CaseSidebarProps) {
   const [activeSection, setActiveSection] = useState(sections[0]?.id || "");
 
   useEffect(() => {
@@ -49,6 +50,17 @@ export function CaseSidebar({ sections }: CaseSidebarProps) {
       className="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 z-40"
       aria-label="Case study sections"
     >
+      {/* Project Name */}
+      <div className="mb-6 pb-4 border-b border-gray-200">
+        <span className="text-xs text-gray-400 uppercase tracking-wider">
+          Case Study
+        </span>
+        <h2 className="text-sm font-bold text-gray-900 mt-1 max-w-[160px] leading-tight">
+          {projectName}
+        </h2>
+      </div>
+
+      {/* Section Navigation */}
       <ul className="space-y-3">
         {sections.map((section) => (
           <li key={section.id}>
