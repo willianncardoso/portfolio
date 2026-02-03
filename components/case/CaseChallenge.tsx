@@ -24,17 +24,17 @@ export function CaseChallenge({ challenge }: CaseChallengeProps) {
           {challenge.description}
         </p>
 
-        {/* Key points - numbered with gradient badges */}
+        {/* Key points - numbered */}
         <div className="space-y-6 mb-12">
           {challenge.points.map((point, index) => (
-            <div key={index} className="flex gap-6 items-start group">
+            <div key={index} className="flex gap-5 items-start">
               {/* Number badge */}
-              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 text-white font-black text-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                {index + 1}
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-gray-900 flex items-center justify-center mt-0.5">
+                <span className="text-white text-sm font-bold">{index + 1}</span>
               </div>
 
               {/* Point text */}
-              <p className="flex-1 text-lg text-gray-700 leading-relaxed pt-3">
+              <p className="flex-1 text-lg text-gray-700 leading-relaxed">
                 {point}
               </p>
             </div>

@@ -32,7 +32,6 @@ export const eswCase: CaseStudy = {
     { value: "40%", label: "Reduction in support tickets" },
     { value: "1 week → hours", label: "Onboarding time improvement" },
     { value: "500", label: "Global users migrated successfully" },
-    { value: "30", label: "In-depth user interviews conducted" },
   ],
 
   content: {

@@ -126,7 +126,7 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-4 mb-16">
               <Link
                 href="/#work"
-                className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition-colors"
               >
                 {t("primaryCTA")}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -137,7 +137,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${t("secondaryCTA")} (opens in new tab)`}
-                  className="inline-flex items-center gap-3 px-10 py-5 bg-white border-2 border-gray-200 text-gray-900 rounded-2xl font-bold text-lg hover:border-primary-500 hover:shadow-xl transition-all"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-[#0A66C2] text-white rounded-xl font-bold text-lg hover:bg-[#004182] transition-colors"
                 >
                   {t("secondaryCTA")}
                 </a>
@@ -182,20 +182,7 @@ export function HeroSection() {
               </div>
 
               {/* Glow behind photo */}
-              <div className="absolute -inset-8 bg-gradient-to-br from-primary-500 via-purple-500 to-accent-500 rounded-[3rem] blur-3xl opacity-20 -z-10" />
-
-              {/* Floating badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-4 border-2 border-primary-100 z-20">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-cyan-600 rounded-xl flex items-center justify-center">
-                    <span className="text-white font-black text-lg">7+</span>
-                  </div>
-                  <div>
-                    <div className="text-base font-bold text-gray-900">Years</div>
-                    <div className="text-xs text-gray-600">Enterprise Design</div>
-                  </div>
-                </div>
-              </div>
+              <div className="absolute -inset-8 bg-gradient-to-br from-primary-500 via-purple-500 to-accent-500 rounded-[3rem] blur-3xl opacity-20 -z-10" aria-hidden="true" />
 
               {/* Geometric accents */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-cyan-400 to-pink-400 rounded-2xl rotate-12 opacity-40 -z-20" />

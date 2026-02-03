@@ -29,27 +29,24 @@ export function CaseMetrics({ metrics }: CaseMetricsProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {metrics.map((metric, index) => (
-            <div key={index} className="group relative">
-              {/* Card */}
-              <div className="relative bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-primary-200 overflow-hidden">
-                {/* Gradient accent bar */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
+            <div key={index} className="flex flex-col bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-primary-200 overflow-hidden relative h-full min-h-[160px]">
+              {/* Gradient accent bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
 
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center mb-6">
-                  <TrendingUp className="w-6 h-6 text-white drop-shadow-sm" />
-                </div>
-
-                {/* BIG number */}
-                <div className="text-4xl md:text-5xl font-black mb-3 text-gray-900 leading-none">
-                  {metric.value}
-                </div>
-
-                {/* Label */}
-                <p className="text-base text-gray-600 leading-relaxed font-medium">
-                  {metric.label}
-                </p>
+              {/* Icon */}
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center mb-4">
+                <TrendingUp className="w-5 h-5 text-white" aria-hidden="true" />
               </div>
+
+              {/* BIG number */}
+              <div className="text-3xl md:text-4xl font-black mb-2 text-gray-900 leading-none">
+                {metric.value}
+              </div>
+
+              {/* Label */}
+              <p className="text-sm text-gray-600 leading-relaxed font-medium mt-auto">
+                {metric.label}
+              </p>
             </div>
           ))}
         </div>

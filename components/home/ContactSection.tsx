@@ -28,7 +28,7 @@ export function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gray-900 text-white rounded-2xl font-bold text-lg hover:bg-gray-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition-colors"
             >
               <Mail className="w-5 h-5" aria-hidden="true" />
               {t("emailButton")}
@@ -38,7 +38,7 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${t("linkedinButton")} (opens in new tab)`}
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0A66C2] text-white rounded-2xl font-bold text-lg hover:bg-[#004182] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#0A66C2] text-white rounded-xl font-bold text-lg hover:bg-[#004182] transition-colors"
             >
               <Linkedin className="w-5 h-5" aria-hidden="true" />
               {t("linkedinButton")}

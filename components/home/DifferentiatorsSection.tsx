@@ -1,6 +1,6 @@
 /**
  * COMPONENTE: DifferentiatorsSection
- * Bento grid showing professional differentiators
+ * Neutral cards with colored left border accents
  */
 
 "use client";
@@ -14,26 +14,26 @@ const items = [
   {
     key: "enterprise" as const,
     icon: Building2,
-    gradient: "from-indigo-600 to-indigo-700",
-    span: "col-span-1 md:col-span-2",
+    borderColor: "border-l-indigo-500",
+    iconColor: "text-indigo-600",
   },
   {
     key: "code" as const,
     icon: Code2,
-    gradient: "from-teal-600 to-cyan-700",
-    span: "col-span-1 md:col-span-2",
+    borderColor: "border-l-teal-500",
+    iconColor: "text-teal-600",
   },
   {
     key: "research" as const,
     icon: Brain,
-    gradient: "from-purple-600 to-violet-700",
-    span: "col-span-1 md:col-span-2",
+    borderColor: "border-l-purple-500",
+    iconColor: "text-purple-600",
   },
   {
     key: "global" as const,
     icon: Globe,
-    gradient: "from-pink-600 to-rose-700",
-    span: "col-span-1 md:col-span-2",
+    borderColor: "border-l-rose-500",
+    iconColor: "text-rose-600",
   },
 ];
 
@@ -52,28 +52,24 @@ export function DifferentiatorsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {items.map((item) => {
             const IconComponent = item.icon;
             return (
               <div
                 key={item.key}
-                className={`bg-gradient-to-br ${item.gradient} rounded-3xl p-8 text-white shadow-lg hover:shadow-2xl transition-shadow overflow-hidden relative group`}
+                className={`bg-white border border-gray-200 ${item.borderColor} border-l-4 rounded-xl p-6 hover:shadow-lg transition-shadow`}
               >
-                {/* Background decoration */}
-                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" aria-hidden="true" />
-
-                <div className="flex flex-col gap-4 relative z-10">
-                  <IconComponent className="w-10 h-10 drop-shadow-sm" />
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-2">
-                      {t(`items.${item.key}.title`)}
-                    </h3>
-                    <p className="text-white/90 leading-relaxed text-sm md:text-base">
-                      {t(`items.${item.key}.description`)}
-                    </p>
-                  </div>
-                </div>
+                <IconComponent
+                  className={`w-6 h-6 ${item.iconColor} mb-4`}
+                  aria-hidden="true"
+                />
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {t(`items.${item.key}.title`)}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {t(`items.${item.key}.description`)}
+                </p>
               </div>
             );
           })}
