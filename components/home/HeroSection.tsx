@@ -51,21 +51,21 @@ export function HeroSection() {
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50" />
 
-      {/* Large animated blobs */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary-400/25 to-purple-400/25 rounded-full blur-3xl animate-blob" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-accent-400/25 to-pink-400/25 rounded-full blur-3xl animate-blob animation-delay-2000" />
-      <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-300/20 to-accent-300/20 rounded-full blur-3xl animate-blob animation-delay-4000" />
+      {/* Large animated blobs (decorative) */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary-400/25 to-purple-400/25 rounded-full blur-3xl animate-blob" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-accent-400/25 to-pink-400/25 rounded-full blur-3xl animate-blob animation-delay-2000" aria-hidden="true" />
+      <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-300/20 to-accent-300/20 rounded-full blur-3xl animate-blob animation-delay-4000" aria-hidden="true" />
 
       <Container className="relative z-10 py-24 md:py-32">
-        <div className="grid lg:grid-cols-[1.1fr,1fr] gap-16 items-center">
+        <div className="grid md:grid-cols-[1.2fr,0.8fr] gap-12 lg:gap-16 items-center">
           {/* Left: Content */}
           <div className="max-w-3xl">
             {/* Status badge with pulse */}
             {siteConfig.availability.isAvailable && (
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-full mb-10 shadow-lg">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-emerald-600 text-white rounded-full mb-10 shadow-lg shadow-emerald-500/25">
                 <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-white" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-300" />
                 </span>
                 <span className="text-sm font-bold tracking-wide">
                   OPEN TO REMOTE OPPORTUNITIES
@@ -136,6 +136,7 @@ export function HeroSection() {
                   href={siteConfig.links.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${t("secondaryCTA")} (opens in new tab)`}
                   className="inline-flex items-center gap-3 px-10 py-5 bg-white border-2 border-gray-200 text-gray-900 rounded-2xl font-bold text-lg hover:border-primary-500 hover:shadow-xl transition-all"
                 >
                   {t("secondaryCTA")}
@@ -167,9 +168,9 @@ export function HeroSection() {
           </div>
 
           {/* Right: Photo with decorative elements */}
-          <div className="relative hidden lg:block">
+          <div className="relative hidden md:flex justify-center">
             {/* Main photo */}
-            <div className="relative z-10">
+            <div className="relative z-10 max-w-sm lg:max-w-md w-full">
               <div className="aspect-square relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl">
                 <Image
                   src={getImagePath("/images/willian-photo.jpg")}
@@ -179,33 +180,33 @@ export function HeroSection() {
                   priority
                 />
               </div>
-            </div>
 
-            {/* Glow behind photo */}
-            <div className="absolute -inset-8 bg-gradient-to-br from-primary-500 via-purple-500 to-accent-500 rounded-[3rem] blur-3xl opacity-20 -z-10" />
+              {/* Glow behind photo */}
+              <div className="absolute -inset-8 bg-gradient-to-br from-primary-500 via-purple-500 to-accent-500 rounded-[3rem] blur-3xl opacity-20 -z-10" />
 
-            {/* Floating badge */}
-            <div className="absolute -bottom-8 -left-8 bg-white rounded-3xl shadow-2xl p-6 border-4 border-primary-100 z-20">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center">
-                  <span className="text-white font-black text-2xl">7+</span>
-                </div>
-                <div>
-                  <div className="text-lg font-bold text-gray-900">Years</div>
-                  <div className="text-sm text-gray-600">Enterprise Design</div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-4 border-2 border-primary-100 z-20">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-cyan-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-black text-lg">7+</span>
+                  </div>
+                  <div>
+                    <div className="text-base font-bold text-gray-900">Years</div>
+                    <div className="text-xs text-gray-600">Enterprise Design</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Geometric accents */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent-400 to-pink-400 rounded-3xl rotate-12 opacity-50 -z-20" />
-            <div className="absolute -bottom-12 -right-12 w-40 h-40 bg-gradient-to-br from-primary-400 to-purple-400 rounded-3xl -rotate-12 opacity-40 -z-20" />
+              {/* Geometric accents */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-cyan-400 to-pink-400 rounded-2xl rotate-12 opacity-40 -z-20" />
+              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-2xl -rotate-12 opacity-30 -z-20" />
+            </div>
           </div>
         </div>
       </Container>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce hidden md:block" aria-hidden="true">
         <ChevronDown className="w-8 h-8 text-gray-400" />
       </div>
     </section>

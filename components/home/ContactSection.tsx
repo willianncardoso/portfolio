@@ -30,16 +30,17 @@ export function ContactSection() {
               href={`mailto:${siteConfig.email}`}
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gray-900 text-white rounded-2xl font-bold text-lg hover:bg-gray-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5" aria-hidden="true" />
               {t("emailButton")}
             </a>
             <a
               href={siteConfig.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${t("linkedinButton")} (opens in new tab)`}
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0A66C2] text-white rounded-2xl font-bold text-lg hover:bg-[#004182] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-5 h-5" aria-hidden="true" />
               {t("linkedinButton")}
             </a>
           </div>

@@ -11,10 +11,12 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Link } from "@/i18n/routing";
 import { siteConfig } from "@/content/site-config";
+import { getImagePath } from "@/lib/image-path";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -34,7 +36,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -58,9 +60,22 @@ export function Header() {
     >
       <Container>
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo with accent bar */}
+          {/* Logo with avatar and accent bar */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-1 h-8 bg-gradient-to-b from-accent-500 to-primary-600 rounded-full" />
+            {scrolled && (
+              <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-primary-200 flex-shrink-0">
+                <Image
+                  src={getImagePath("/images/willian-photo.jpg")}
+                  alt={siteConfig.name}
+                  width={32}
+                  height={32}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            )}
+            {!scrolled && (
+              <div className="w-1 h-8 bg-gradient-to-b from-accent-500 to-primary-600 rounded-full" />
+            )}
             <div>
               <span className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-accent-600 transition-colors duration-200">
                 {siteConfig.name}
@@ -107,6 +122,7 @@ export function Header() {
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${t("linkedin")} (opens in new tab)`}
                 className="inline-flex items-center px-5 py-2 bg-[#0A66C2] text-white text-sm font-semibold rounded-lg hover:bg-[#004182] transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 {t("linkedin")}
@@ -166,6 +182,7 @@ export function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}
+                  aria-label={`${t("linkedin")} (opens in new tab)`}
                   className="block w-full text-center px-5 py-3 bg-[#0A66C2] text-white font-semibold rounded-lg hover:bg-[#004182] transition-all duration-200"
                 >
                   {t("linkedin")}

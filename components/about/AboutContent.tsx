@@ -38,11 +38,11 @@ const journeyIcons = {
   dev: Code2,
 };
 const journeyColors = {
-  neuro: "from-pink-500 to-pink-600",
-  lead: "from-accent-500 to-accent-600",
-  senior: "from-primary-500 to-primary-600",
-  design: "from-purple-500 to-purple-600",
-  dev: "from-blue-500 to-blue-600",
+  neuro: "from-pink-600 to-rose-700",
+  lead: "from-teal-600 to-cyan-700",
+  senior: "from-indigo-600 to-indigo-700",
+  design: "from-purple-600 to-violet-700",
+  dev: "from-blue-600 to-blue-700",
 };
 const journeyHighlights = {
   neuro: "Research",
@@ -69,12 +69,12 @@ const skillIcons = {
   data: BarChart3,
 };
 const skillColors = {
-  enterprise: "from-accent-400 to-accent-600",
-  systems: "from-purple-400 to-purple-600",
-  code: "from-pink-400 to-pink-600",
-  research: "from-amber-400 to-orange-500",
-  global: "from-green-400 to-emerald-600",
-  data: "from-blue-400 to-indigo-600",
+  enterprise: "from-teal-600 to-cyan-700",
+  systems: "from-purple-600 to-violet-700",
+  code: "from-pink-600 to-rose-700",
+  research: "from-amber-600 to-orange-700",
+  global: "from-emerald-600 to-green-700",
+  data: "from-blue-600 to-indigo-700",
 };
 
 const funKeys = ["neuro", "nlp", "music", "travel"] as const;
@@ -85,10 +85,10 @@ const funIcons = {
   travel: Plane,
 };
 const funColors = {
-  neuro: "from-purple-400 to-purple-600",
-  nlp: "from-accent-400 to-accent-600",
-  music: "from-pink-400 to-pink-600",
-  travel: "from-amber-400 to-orange-500",
+  neuro: "from-purple-600 to-violet-700",
+  nlp: "from-teal-600 to-cyan-700",
+  music: "from-pink-600 to-rose-700",
+  travel: "from-amber-600 to-orange-700",
 };
 
 export function AboutContent() {
@@ -98,8 +98,8 @@ export function AboutContent() {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pb-28 bg-gradient-to-br from-accent-50/40 via-white to-purple-50/30 overflow-hidden">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute bottom-10 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-blob animation-delay-2000" />
+        <div className="absolute top-20 right-10 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" aria-hidden="true" />
+        <div className="absolute bottom-10 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-blob animation-delay-2000" aria-hidden="true" />
 
         <Container>
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -153,7 +153,7 @@ export function AboutContent() {
                     <div
                       className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform z-10`}
                     >
-                      <IconComponent className="w-7 h-7 md:w-8 md:h-8" />
+                      <IconComponent className="w-7 h-7 md:w-8 md:h-8 drop-shadow-sm" />
                     </div>
 
                     {/* Connecting line */}
@@ -207,7 +207,7 @@ export function AboutContent() {
                   <div
                     className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${gradient} mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <IconComponent className="w-6 h-6 text-white" />
+                    <IconComponent className="w-6 h-6 text-white drop-shadow-sm" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {t(`skills.${key}.title`)}
@@ -224,8 +224,8 @@ export function AboutContent() {
 
       {/* What I'm Looking For */}
       <section className="py-24 md:py-32 bg-gradient-to-br from-accent-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
+        <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl" aria-hidden="true" />
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-white/5 rounded-full blur-2xl" aria-hidden="true" />
 
         <Container>
           <div className="max-w-3xl mx-auto text-center relative z-10">
@@ -246,17 +246,19 @@ export function AboutContent() {
                   href={siteConfig.links.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Let's Connect on LinkedIn (opens in new tab)"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 rounded-xl font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                   Let&apos;s Connect
                 </a>
               )}
               <a
                 href={`mailto:${siteConfig.email}`}
+                aria-label="Send email to Willian Cardoso"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-white/15 text-white border-2 border-white/30 rounded-xl font-bold hover:bg-white/25 transition-all"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" aria-hidden="true" />
                 Email Me
               </a>
             </div>
@@ -283,7 +285,7 @@ export function AboutContent() {
                   <div
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${gradient} mb-6 shadow-sm`}
                   >
-                    <IconComponent className="w-7 h-7 text-white" />
+                    <IconComponent className="w-7 h-7 text-white drop-shadow-sm" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {t(`funItems.${key}.title`)}
