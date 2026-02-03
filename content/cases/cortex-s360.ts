@@ -32,6 +32,39 @@ export const cortexCase: CaseStudy = {
     { value: "15", label: "User interviews conducted" },
   ],
 
+  process: [
+    {
+      number: "01",
+      title: "Discovery",
+      duration: "2 months",
+      bullets: ["15 operator interviews", "Real shift shadowing", "Pain point mapping"],
+    },
+    {
+      number: "02",
+      title: "Define",
+      duration: "2 weeks",
+      bullets: ["Design principles", "Trust transparency", "Stress reduction focus"],
+    },
+    {
+      number: "03",
+      title: "Design",
+      duration: "6 weeks",
+      bullets: ["Pastel color palette", "Recommendation UI", "Quick reassignment"],
+    },
+    {
+      number: "04",
+      title: "Test",
+      duration: "3 weeks",
+      bullets: ["Operator testing", "Real environment", "Feedback integration"],
+    },
+    {
+      number: "05",
+      title: "Deliver",
+      duration: "Launch",
+      bullets: ["Production release", "~BRL 3M savings", "Reduced stress"],
+    },
+  ],
+
   content: {
     overview: [
       "Cortex S360 is IBM's field service dispatch platform used by command center operators to assign technical service calls to field technicians across Brazil and LATAM. I led the complete visual and UX transformation as the platform evolved from a fully manual system to an intelligent, data-driven recommendation engine.",

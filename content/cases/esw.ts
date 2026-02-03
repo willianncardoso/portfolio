@@ -34,6 +34,39 @@ export const eswCase: CaseStudy = {
     { value: "500", label: "Global users migrated successfully" },
   ],
 
+  process: [
+    {
+      number: "01",
+      title: "Discovery",
+      duration: "3 months",
+      bullets: ["Read 100+ pages docs", "30 user interviews", "4 continents research"],
+    },
+    {
+      number: "02",
+      title: "Define",
+      duration: "1 month",
+      bullets: ["Pain point synthesis", "Regional differences", "Opportunity mapping"],
+    },
+    {
+      number: "03",
+      title: "Design",
+      duration: "Ongoing",
+      bullets: ["PAL design system", "High-fidelity prototypes", "Component library"],
+    },
+    {
+      number: "04",
+      title: "Test",
+      duration: "Per release",
+      bullets: ["Usability testing", "Techliner feedback", "Iterative refinement"],
+    },
+    {
+      number: "05",
+      title: "Deliver",
+      duration: "3 years",
+      bullets: ["Phased rollout", "500 users migrated", "Continuous support"],
+    },
+  ],
+
   content: {
     overview: [
       "The Danube/CESW project was my most challenging and rewarding experience at IBM: taking over a failed project that had been passed through multiple teams without ever launching, and transforming a 30-year-old legacy system into a modern, user-friendly configurator.",

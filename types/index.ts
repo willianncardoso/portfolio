@@ -26,6 +26,7 @@ export type {
   CaseSolution,
   CaseContent,
   CasePreview,
+  ProcessStep,
 } from "./case";
 
 // Se adicionar mais arquivos de tipos no futuro, exporte aqui também

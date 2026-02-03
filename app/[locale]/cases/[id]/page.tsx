@@ -14,6 +14,7 @@ import { CaseHero } from "@/components/case/CaseHero";
 import { CaseMetrics } from "@/components/case/CaseMetrics";
 import { CaseOverview } from "@/components/case/CaseOverview";
 import { CaseChallenge } from "@/components/case/CaseChallenge";
+import { ProcessSection } from "@/components/case/ProcessSection";
 import { CaseApproach } from "@/components/case/CaseApproach";
 import { CaseSolution } from "@/components/case/CaseSolution";
 import { CaseResults } from "@/components/case/CaseResults";
@@ -104,6 +105,9 @@ export default async function CasePage({ params }: CasePageProps) {
       <CaseMetrics metrics={caseStudy.metrics} />
       <CaseOverview content={caseStudy.content.overview} />
       <CaseChallenge challenge={caseStudy.content.challenge} />
+      {caseStudy.process && caseStudy.process.length > 0 && (
+        <ProcessSection steps={caseStudy.process} />
+      )}
       <CaseApproach steps={caseStudy.content.approach} />
       <CaseSolution solution={caseStudy.content.solution} heroImage={caseStudy.images.hero} heroImageAlt={`${caseStudy.title} - Final Solution`} />
       <CaseResults results={caseStudy.content.results} />

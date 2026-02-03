@@ -34,6 +34,39 @@ export const econfigCase: CaseStudy = {
     { value: "30%", label: "Reduction in configuration time" },
   ],
 
+  process: [
+    {
+      number: "01",
+      title: "Map",
+      duration: "4 weeks",
+      bullets: ["Service blueprint", "End-to-end journey", "Backstage processes"],
+    },
+    {
+      number: "02",
+      title: "Research",
+      duration: "3 weeks",
+      bullets: ["12 shadowing sessions", "Tribal knowledge gaps", "Workaround analysis"],
+    },
+    {
+      number: "03",
+      title: "Design",
+      duration: "6 weeks",
+      bullets: ["Wizard pattern", "Real-time validation", "Template library"],
+    },
+    {
+      number: "04",
+      title: "Build",
+      duration: "8 weeks",
+      bullets: ["Recommendation engine", "Compatibility rules", "Smart defaults"],
+    },
+    {
+      number: "05",
+      title: "Measure",
+      duration: "Ongoing",
+      bullets: ["60% fewer errors", "30% faster config", "100K+ processed/year"],
+    },
+  ],
+
   content: {
     overview: [
       "E-Config is IBM's internal hardware configuration tool, used by sales engineers and technical teams worldwide to build custom server, storage, and networking configurations for enterprise clients. Every hardware deal at IBM flows through this tool—over 100,000 configurations per year—making it one of the most business-critical internal platforms.",

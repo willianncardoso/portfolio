@@ -35,6 +35,39 @@ export const iguaCase: CaseStudy = {
     { value: "200K+", label: "App downloads in first 6 months" },
   ],
 
+  process: [
+    {
+      number: "01",
+      title: "Map",
+      duration: "8 weeks",
+      bullets: ["12 service blueprints", "Customer journeys", "Backstage mapping"],
+    },
+    {
+      number: "02",
+      title: "Research",
+      duration: "4 weeks",
+      bullets: ["25+ interviews", "4 cities visited", "Diverse demographics"],
+    },
+    {
+      number: "03",
+      title: "Design",
+      duration: "6 weeks",
+      bullets: ["Progressive disclosure", "Large touch targets", "Plain language"],
+    },
+    {
+      number: "04",
+      title: "Test",
+      duration: "4 weeks",
+      bullets: ["In-home testing", "Low literacy users", "Trust validation"],
+    },
+    {
+      number: "05",
+      title: "Scale",
+      duration: "Phased",
+      bullets: ["3-phase rollout", "200K+ downloads", "50% fewer calls"],
+    },
+  ],
+
   content: {
     overview: [
       "Iguá Saneamento is one of Brazil's largest private water and sanitation utilities, serving over 6 million people across multiple states. As part of an IBM consulting engagement, I was embedded with their team to lead the service design for a comprehensive digital transformation of their customer-facing operations.",

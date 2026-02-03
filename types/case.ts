@@ -175,6 +175,24 @@ export interface CaseContent {
 }
 
 /**
+ * ETAPA DO PROCESSO VISUAL
+ * Uma fase do fluxo de trabalho mostrada na seção "My Process"
+ */
+export interface ProcessStep {
+  /** Número da etapa (ex: "01", "02") */
+  number: string;
+
+  /** Título curto da etapa (ex: "Discovery", "Design") */
+  title: string;
+
+  /** Duração da etapa (ex: "3 months", "Ongoing") */
+  duration: string;
+
+  /** Lista de atividades nesta etapa (3 bullets recomendado) */
+  bullets: string[];
+}
+
+/**
  * CASE STUDY COMPLETO
  * Estrutura completa de um case study
  */
@@ -220,6 +238,9 @@ export interface CaseStudy {
 
   /** Conteúdo completo do case */
   content: CaseContent;
+
+  /** Etapas do processo visual (seção "My Process") */
+  process?: ProcessStep[];
 
   // ============================================
   // NAVEGAÇÃO
