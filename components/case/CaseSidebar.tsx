@@ -52,7 +52,7 @@ export function CaseSidebar({ projectName, sections }: CaseSidebarProps) {
     >
       {/* Project Name */}
       <div className="mb-6 pb-4 border-b border-gray-200">
-        <span className="text-xs text-gray-400 uppercase tracking-wider">
+        <span className="text-xs text-gray-500 uppercase tracking-wider">
           Case Study
         </span>
         <h2 className="text-sm font-bold text-gray-900 mt-1 max-w-[160px] leading-tight">
@@ -70,7 +70,7 @@ export function CaseSidebar({ projectName, sections }: CaseSidebarProps) {
                 "flex items-center gap-3 text-sm transition-all duration-200",
                 activeSection === section.id
                   ? "text-gray-900 font-medium"
-                  : "text-gray-400 hover:text-gray-600"
+                  : "text-gray-500 hover:text-gray-700"
               )}
             >
               <span
@@ -91,7 +91,7 @@ export function CaseSidebar({ projectName, sections }: CaseSidebarProps) {
         <li className="pt-4 border-t border-gray-200 mt-4">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+            className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
           >
             &uarr; Top
           </button>

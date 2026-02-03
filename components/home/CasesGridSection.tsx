@@ -79,7 +79,7 @@ export function CasesGridSection() {
                   <span className="px-4 py-1.5 bg-gradient-to-r from-primary-50 to-accent-50 text-primary-700 text-sm font-bold rounded-full border-2 border-primary-200">
                     {caseStudy.category}
                   </span>
-                  <span className="text-sm text-gray-400">•</span>
+                  <span className="text-sm text-gray-500">•</span>
                   <span className="text-sm text-gray-500 font-medium">
                     {index === 0
                       ? "Featured"

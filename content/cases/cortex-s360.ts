@@ -27,9 +27,9 @@ export const cortexCase: CaseStudy = {
   },
 
   metrics: [
-    { value: "~BRL 3M", label: "Annual cost savings for IBM" },
-    { value: "100+", label: "Command center dispatchers" },
-    { value: "15", label: "User interviews conducted" },
+    { value: "~BRL 3M", label: "Annual savings" },
+    { value: "100+", label: "Dispatchers impacted" },
+    { value: "15", label: "User interviews" },
   ],
 
   process: [

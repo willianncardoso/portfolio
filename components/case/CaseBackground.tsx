@@ -20,7 +20,7 @@ export function CaseBackground({ background }: CaseBackgroundProps) {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
           {/* About the Project */}
           <div>
-            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">
+            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">
               {aboutProject.title}
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -45,7 +45,7 @@ export function CaseBackground({ background }: CaseBackgroundProps) {
 
           {/* My Role */}
           <div>
-            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">
+            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">
               {myRole.title}
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -58,7 +58,7 @@ export function CaseBackground({ background }: CaseBackgroundProps) {
                   key={i}
                   className="flex items-start gap-2 text-sm text-gray-600"
                 >
-                  <span className="text-gray-400 mt-0.5">&#8226;</span>
+                  <span className="text-gray-500 mt-0.5">&#8226;</span>
                   {item}
                 </li>
               ))}

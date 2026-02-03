@@ -22,7 +22,7 @@ export function CaseHero({ caseStudy }: CaseHeroProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
       </div>
 
       {/* Conteúdo */}
@@ -36,12 +36,18 @@ export function CaseHero({ caseStudy }: CaseHeroProps) {
           </div>
 
           {/* Título */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+          >
             {title}
           </h1>
 
           {/* Subtítulo */}
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p
+            className="text-xl text-gray-200 max-w-3xl mx-auto"
+            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}
+          >
             {subtitle}
           </p>
         </div>

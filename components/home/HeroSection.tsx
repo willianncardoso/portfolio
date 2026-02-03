@@ -57,24 +57,24 @@ export function HeroSection() {
       <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-300/20 to-accent-300/20 rounded-full blur-3xl animate-blob animation-delay-4000" aria-hidden="true" />
 
       <Container className="relative z-10 py-24 md:py-32 lg:py-40">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.4fr_1fr] xl:grid-cols-[1.3fr_1fr] gap-8 lg:gap-12 items-center">
           {/* Left: Content */}
           <div className="max-w-3xl">
             {/* Status badge with pulse */}
             {siteConfig.availability.isAvailable && (
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-emerald-600 text-white rounded-full mb-10 shadow-lg shadow-emerald-500/25">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-300" />
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 border border-gray-200 bg-white/50 text-gray-600 rounded-full mb-10">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                 </span>
-                <span className="text-sm font-bold tracking-wide">
-                  OPEN TO REMOTE OPPORTUNITIES
+                <span className="text-sm font-medium">
+                  Open to Remote Opportunities
                 </span>
               </div>
             )}
 
             {/* HUGE headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.95] tracking-tight text-gray-900 mb-10">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] 2xl:text-7xl font-extrabold leading-[1.1] tracking-tight text-gray-900 mb-10">
               {t("headline").split("actually").length > 1 ? (
                 <>
                   {t("headline").split("actually")[0]}
@@ -170,7 +170,7 @@ export function HeroSection() {
           {/* Right: Photo with decorative elements */}
           <div className="relative hidden lg:flex justify-center">
             {/* Main photo */}
-            <div className="relative z-10 max-w-sm lg:max-w-md w-full">
+            <div className="relative z-10 max-w-xs lg:max-w-sm xl:max-w-md w-full">
               <div className="aspect-square relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl">
                 <Image
                   src={getImagePath("/images/willian-photo.jpg")}
@@ -194,7 +194,7 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block" aria-hidden="true">
-        <ChevronDown className="w-8 h-8 text-gray-400" />
+        <ChevronDown className="w-8 h-8 text-gray-500" />
       </div>
     </section>
   );

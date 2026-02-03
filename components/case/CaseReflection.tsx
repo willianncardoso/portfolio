@@ -45,7 +45,7 @@ export function CaseReflection({ data }: CaseReflectionProps) {
                   key={i}
                   className="flex items-start gap-3 text-base text-gray-600"
                 >
-                  <span className="text-gray-400 mt-0.5">&rarr;</span>
+                  <span className="text-gray-500 mt-0.5">&rarr;</span>
                   {step}
                 </li>
               ))}

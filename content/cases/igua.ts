@@ -30,9 +30,9 @@ export const iguaCase: CaseStudy = {
   },
 
   metrics: [
-    { value: "40%", label: "Increase in customer satisfaction" },
-    { value: "50%", label: "Reduction in call center volume" },
-    { value: "200K+", label: "App downloads in first 6 months" },
+    { value: "40%", label: "Higher satisfaction" },
+    { value: "50%", label: "Fewer call center calls" },
+    { value: "200K+", label: "App downloads (6 mo)" },
   ],
 
   process: [
@@ -344,5 +344,5 @@ export const iguaCase: CaseStudy = {
     ],
   },
 
-  nextCaseId: null,
+  nextCaseId: "esw",
 };

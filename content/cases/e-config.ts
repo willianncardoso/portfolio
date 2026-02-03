@@ -29,9 +29,9 @@ export const econfigCase: CaseStudy = {
   },
 
   metrics: [
-    { value: "60%", label: "Fewer configuration errors" },
-    { value: "100K+", label: "Configurations processed per year" },
-    { value: "30%", label: "Reduction in configuration time" },
+    { value: "60%", label: "Fewer errors" },
+    { value: "100K+", label: "Configs processed/year" },
+    { value: "30%", label: "Faster configuration" },
   ],
 
   process: [
