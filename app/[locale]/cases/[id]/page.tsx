@@ -20,7 +20,7 @@ import { CaseKeyDecisions } from "@/components/case/CaseKeyDecisions";
 import { CaseImpact } from "@/components/case/CaseImpact";
 import { CaseReflection } from "@/components/case/CaseReflection";
 import { ProcessSection } from "@/components/case/ProcessSection";
-import { CaseNavigation } from "@/components/case/CaseNavigation";
+import { ProjectsCarousel } from "@/components/case/ProjectsCarousel";
 
 // Generate static params for all locales and cases
 export function generateStaticParams() {
@@ -157,7 +157,7 @@ export default async function CasePage({ params }: CasePageProps) {
           </section>
         )}
 
-        <CaseNavigation nextCaseId={caseStudy.nextCaseId} />
+        <ProjectsCarousel currentCaseId={caseStudy.id} />
       </main>
     </>
   );
