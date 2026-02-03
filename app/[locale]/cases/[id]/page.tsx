@@ -105,7 +105,7 @@ export default async function CasePage({ params }: CasePageProps) {
       <CaseOverview content={caseStudy.content.overview} />
       <CaseChallenge challenge={caseStudy.content.challenge} />
       <CaseApproach steps={caseStudy.content.approach} />
-      <CaseSolution solution={caseStudy.content.solution} />
+      <CaseSolution solution={caseStudy.content.solution} heroImage={caseStudy.images.hero} heroImageAlt={`${caseStudy.title} - Final Solution`} />
       <CaseResults results={caseStudy.content.results} />
       <CaseLearnings learnings={caseStudy.content.learnings} />
       <CaseNavigation nextCaseId={caseStudy.nextCaseId} />

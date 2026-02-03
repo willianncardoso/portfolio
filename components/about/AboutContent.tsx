@@ -7,8 +7,6 @@
 
 import Image from "next/image";
 import {
-  Briefcase,
-  GraduationCap,
   Code2,
   Brain,
   Globe,
@@ -22,22 +20,28 @@ import {
   Plane,
   BookOpen,
   MessageSquare,
+  Palette,
+  Rocket,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/content/site-config";
 import { getImagePath } from "@/lib/image-path";
 
-const journeyKeys = ["ibm", "scotland", "dev"] as const;
+const journeyKeys = ["dev", "design", "senior", "lead", "neuro"] as const;
 const journeyIcons = {
-  ibm: Briefcase,
-  scotland: GraduationCap,
   dev: Code2,
+  design: Palette,
+  senior: Building2,
+  lead: Rocket,
+  neuro: Brain,
 };
 const journeyColors = {
-  ibm: "from-accent-400 to-accent-600",
-  scotland: "from-purple-400 to-purple-600",
-  dev: "from-pink-400 to-pink-600",
+  dev: "from-blue-400 to-blue-600",
+  design: "from-purple-400 to-purple-600",
+  senior: "from-accent-400 to-accent-600",
+  lead: "from-pink-400 to-pink-600",
+  neuro: "from-amber-400 to-orange-500",
 };
 
 const skillKeys = ["enterprise", "systems", "code", "research", "global", "data"] as const;

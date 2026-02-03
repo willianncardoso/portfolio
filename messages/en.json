@@ -76,20 +76,30 @@
     "intro": "I'm Willian Cardoso, a Lead Product Designer with 7+ years at IBM, where I've designed enterprise SaaS products used by thousands of users worldwide. My unique background bridges design, engineering, and neuroscience — giving me a perspective that goes beyond pixels.",
     "journeyTitle": "My Journey",
     "journeyItems": {
-      "ibm": {
-        "year": "2017–Present",
-        "title": "Lead Product Designer at IBM",
-        "description": "Leading design for B2B SaaS products, design systems, and complex operational dashboards. Mentoring junior designers and driving design-engineering collaboration across distributed teams."
-      },
-      "scotland": {
-        "year": "2016",
-        "title": "Exchange Year — University of Strathclyde, Scotland",
-        "description": "Immersive international experience studying at one of the UK's top engineering universities. Expanded my perspective on global collaboration and cross-cultural communication."
-      },
       "dev": {
-        "year": "2014–2017",
-        "title": "Started in Engineering",
-        "description": "Began my career as a development intern, writing code and understanding systems from the inside. This engineering foundation shapes how I design — I think in components, APIs, and data flows."
+        "year": "2016",
+        "title": "Started as a Developer",
+        "description": "Joined IBM as a JavaScript intern, building internal tools. Learned to think like an engineer, understand technical constraints, and speak the language of development teams."
+      },
+      "design": {
+        "year": "2018",
+        "title": "Transitioned to UX/UI Design",
+        "description": "Discovered my true passion was solving user problems, not just writing code. Made the leap to design while keeping my technical foundation — a combination that became my superpower."
+      },
+      "senior": {
+        "year": "2020",
+        "title": "Senior Product Designer",
+        "description": "Led complete redesigns of enterprise configurators and dashboards. Reduced support tickets by 40%, onboarding time by 60%. Learned to measure impact in business metrics, not just pixels."
+      },
+      "lead": {
+        "year": "2023",
+        "title": "Lead Product Designer & Service Designer",
+        "description": "Evolved from screen-level thinking to service design. Now orchestrating end-to-end experiences across multiple touchpoints, leading design systems, and mentoring other designers."
+      },
+      "neuro": {
+        "year": "2024",
+        "title": "Adding Neuroscience",
+        "description": "Started Neuroscience degree and Data Analytics post-grad. Research in Computational Neuroscience, applying NLP to preserve indigenous languages. Bringing scientific rigor to design decisions."
       }
     },
     "skillsTitle": "What I Bring",

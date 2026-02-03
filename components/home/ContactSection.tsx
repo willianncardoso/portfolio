@@ -25,7 +25,11 @@ export function ContactSection() {
           <p className="text-lg text-primary-600">{t("description")}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button href={`mailto:${siteConfig.email}`} size="lg">
+            <Button
+              href={`mailto:${siteConfig.email}`}
+              size="lg"
+              className="bg-gradient-to-r from-accent-500 to-purple-600 text-white hover:from-accent-600 hover:to-purple-700 shadow-lg hover:shadow-xl"
+            >
               <Mail className="mr-2" size={20} aria-hidden="true" />
               {t("emailButton")}
             </Button>
@@ -34,6 +38,7 @@ export function ContactSection() {
               external
               variant="secondary"
               size="lg"
+              className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white"
             >
               <Linkedin className="mr-2" size={20} aria-hidden="true" />
               {t("linkedinButton")}

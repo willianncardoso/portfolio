@@ -107,7 +107,7 @@ export function Header() {
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-accent-500 to-primary-600 text-white text-sm font-semibold rounded-lg hover:from-accent-600 hover:to-primary-700 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                className="inline-flex items-center px-5 py-2 bg-[#0A66C2] text-white text-sm font-semibold rounded-lg hover:bg-[#004182] transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 {t("linkedin")}
               </a>
@@ -166,7 +166,7 @@ export function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}
-                  className="block w-full text-center px-5 py-3 bg-gradient-to-r from-accent-500 to-primary-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-primary-700 transition-all duration-200"
+                  className="block w-full text-center px-5 py-3 bg-[#0A66C2] text-white font-semibold rounded-lg hover:bg-[#004182] transition-all duration-200"
                 >
                   {t("linkedin")}
                 </a>

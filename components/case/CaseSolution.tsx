@@ -16,18 +16,22 @@
  * - Imagem principal em destaque no final
  */
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Card } from "@/components/ui/Card";
 import { ImageWithLightbox } from "@/components/ui/ImageWithLightbox";
 import { CaseSolution as CaseSolutionType } from "@/types";
+import { getImagePath } from "@/lib/image-path";
 
 interface CaseSolutionProps {
   solution: CaseSolutionType;
+  heroImage?: string;
+  heroImageAlt?: string;
 }
 
-export function CaseSolution({ solution }: CaseSolutionProps) {
+export function CaseSolution({ solution, heroImage, heroImageAlt }: CaseSolutionProps) {
   return (
     <Section spacing="xl" background="gray">
       <Container size="md">
@@ -74,6 +78,24 @@ export function CaseSolution({ solution }: CaseSolutionProps) {
               containerClassName="relative aspect-video rounded-2xl shadow-2xl"
               caption={solution.mainImageCaption}
             />
+          </div>
+        )}
+
+        {/* Hero image - full solution overview */}
+        {heroImage && (
+          <div className="mt-16">
+            <div className="aspect-video relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={getImagePath(heroImage)}
+                alt={heroImageAlt || "Final solution overview"}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 896px"
+              />
+            </div>
+            <p className="text-sm text-gray-500 text-center mt-4">
+              Final solution overview
+            </p>
           </div>
         )}
       </Container>

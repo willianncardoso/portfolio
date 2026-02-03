@@ -47,16 +47,15 @@ export function HeroSection() {
                 <>
                   {t("headline").split("actually")[0]}
                   <span className="relative inline-block">
-                    <span className="bg-gradient-to-r from-accent-500 to-purple-600 bg-clip-text text-transparent">
-                      actually
-                    </span>
-                    {/* SVG underline decoration */}
+                    <span className="text-gray-900 font-bold">actually</span>
+                    {/* Gradient underline decoration */}
                     <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 8C30 3 60 2 100 5C140 8 170 4 198 2" stroke="url(#underline-gradient)" strokeWidth="3" strokeLinecap="round" />
+                      <path d="M2 8C30 3 60 2 100 5C140 8 170 4 198 2" stroke="url(#underline-gradient)" strokeWidth="4" strokeLinecap="round" />
                       <defs>
                         <linearGradient id="underline-gradient" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#06b6d4" />
-                          <stop offset="1" stopColor="#9333ea" />
+                          <stop stopColor="#8b5cf6" />
+                          <stop offset="0.5" stopColor="#a855f7" />
+                          <stop offset="1" stopColor="#06b6d4" />
                         </linearGradient>
                       </defs>
                     </svg>

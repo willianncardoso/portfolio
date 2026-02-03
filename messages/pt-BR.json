@@ -76,20 +76,30 @@
     "intro": "Sou Willian Cardoso, Lead Product Designer com 7+ anos na IBM, onde projetei produtos SaaS enterprise usados por milhares de usuários no mundo todo. Meu background único conecta design, engenharia e neurociência — me dando uma perspectiva que vai além dos pixels.",
     "journeyTitle": "Minha Trajetória",
     "journeyItems": {
-      "ibm": {
-        "year": "2017–Presente",
-        "title": "Lead Product Designer na IBM",
-        "description": "Liderando design para produtos B2B SaaS, design systems e dashboards operacionais complexos. Mentorando designers júnior e impulsionando colaboração design-engenharia em times distribuídos."
-      },
-      "scotland": {
-        "year": "2016",
-        "title": "Intercâmbio — University of Strathclyde, Escócia",
-        "description": "Experiência internacional imersiva estudando em uma das principais universidades de engenharia do Reino Unido. Ampliou minha perspectiva sobre colaboração global e comunicação intercultural."
-      },
       "dev": {
-        "year": "2014–2017",
-        "title": "Começou na Engenharia",
-        "description": "Comecei minha carreira como estagiário de desenvolvimento, escrevendo código e entendendo sistemas por dentro. Essa base em engenharia molda como eu projeto — penso em componentes, APIs e fluxos de dados."
+        "year": "2016",
+        "title": "Começou como Desenvolvedor",
+        "description": "Entrou na IBM como estagiário de JavaScript, construindo ferramentas internas. Aprendeu a pensar como engenheiro, entender restrições técnicas e falar a linguagem dos times de desenvolvimento."
+      },
+      "design": {
+        "year": "2018",
+        "title": "Transição para UX/UI Design",
+        "description": "Descobriu que sua verdadeira paixão era resolver problemas de usuários, não apenas escrever código. Fez a transição para design mantendo sua base técnica — uma combinação que se tornou seu superpoder."
+      },
+      "senior": {
+        "year": "2020",
+        "title": "Senior Product Designer",
+        "description": "Liderou redesigns completos de configuradores enterprise e dashboards. Reduziu tickets de suporte em 40%, tempo de onboarding em 60%. Aprendeu a medir impacto em métricas de negócio, não apenas pixels."
+      },
+      "lead": {
+        "year": "2023",
+        "title": "Lead Product Designer & Service Designer",
+        "description": "Evoluiu do pensamento em nível de tela para service design. Orquestrando experiências end-to-end em múltiplos touchpoints, liderando design systems e mentorando outros designers."
+      },
+      "neuro": {
+        "year": "2024",
+        "title": "Adicionando Neurociência",
+        "description": "Iniciou graduação em Neurociência e pós em Data Analytics. Pesquisa em Neurociência Computacional, aplicando NLP para preservar línguas indígenas. Trazendo rigor científico para decisões de design."
       }
     },
     "skillsTitle": "O Que Eu Trago",

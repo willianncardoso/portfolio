@@ -17,7 +17,6 @@
  */
 
 import Image from "next/image";
-import { AlertCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -39,17 +38,19 @@ export function CaseChallenge({ challenge }: CaseChallengeProps) {
         </p>
 
         {/* Lista de pontos do problema */}
-        <ul className="space-y-4 mb-12">
+        <ol className="space-y-4 mb-12">
           {challenge.points.map((point, index) => (
             <li
               key={index}
-              className="flex items-start gap-3 text-base md:text-lg text-primary-700"
+              className="flex items-start gap-4 text-base md:text-lg text-primary-700"
             >
-              <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
-              <span>{point}</span>
+              <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 text-white font-bold flex items-center justify-center text-sm">
+                {index + 1}
+              </span>
+              <span className="flex-1 pt-1">{point}</span>
             </li>
           ))}
-        </ul>
+        </ol>
 
         {/* Imagem opcional */}
         {challenge.image && (
