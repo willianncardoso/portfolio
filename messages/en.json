@@ -70,6 +70,78 @@
     "nextCase": "Next Case",
     "previousCase": "Previous Case"
   },
+  "about": {
+    "title": "About Me",
+    "subtitle": "The intersection of design, code, and cognitive science.",
+    "intro": "I'm Willian Cardoso, a Lead Product Designer with 7+ years at IBM, where I've designed enterprise SaaS products used by thousands of users worldwide. My unique background bridges design, engineering, and neuroscience — giving me a perspective that goes beyond pixels.",
+    "journeyTitle": "My Journey",
+    "journeyItems": {
+      "ibm": {
+        "year": "2017–Present",
+        "title": "Lead Product Designer at IBM",
+        "description": "Leading design for B2B SaaS products, design systems, and complex operational dashboards. Mentoring junior designers and driving design-engineering collaboration across distributed teams."
+      },
+      "scotland": {
+        "year": "2016",
+        "title": "Exchange Year — University of Strathclyde, Scotland",
+        "description": "Immersive international experience studying at one of the UK's top engineering universities. Expanded my perspective on global collaboration and cross-cultural communication."
+      },
+      "dev": {
+        "year": "2014–2017",
+        "title": "Started in Engineering",
+        "description": "Began my career as a development intern, writing code and understanding systems from the inside. This engineering foundation shapes how I design — I think in components, APIs, and data flows."
+      }
+    },
+    "skillsTitle": "What I Bring",
+    "skills": {
+      "enterprise": {
+        "title": "Enterprise SaaS",
+        "description": "Configuration tools, dashboards, complex workflows at IBM scale."
+      },
+      "systems": {
+        "title": "Design Systems",
+        "description": "Building and maintaining scalable component libraries and tokens."
+      },
+      "code": {
+        "title": "Code Fluency",
+        "description": "Python prototyping, JavaScript/Vue reading, engineering mindset."
+      },
+      "research": {
+        "title": "Research + Neuro",
+        "description": "Neuroscience degree, computational research, evidence-based design."
+      },
+      "global": {
+        "title": "Global Teams",
+        "description": "US, LATAM, Europe collaboration. Async-first, timezone-aware."
+      },
+      "data": {
+        "title": "Data Analytics",
+        "description": "Post-grad in Data Analytics. Metrics-informed design decisions."
+      }
+    },
+    "lookingTitle": "What I'm Looking For",
+    "lookingDescription": "I'm seeking remote opportunities with product teams that value design-engineering collaboration. Interested in Senior Product Designer, Design Systems Lead, or Service Designer roles.",
+    "lookingLocations": "Open to remote roles — US, UK, Germany, Portugal, NL | Also open to CLT in Brazil",
+    "funTitle": "Beyond Work",
+    "funItems": {
+      "neuro": {
+        "title": "Neuroscience Student",
+        "description": "Studying how the brain makes decisions — and applying it to design."
+      },
+      "nlp": {
+        "title": "NLP Researcher",
+        "description": "Using computational linguistics to help preserve indigenous languages."
+      },
+      "music": {
+        "title": "Music Lover",
+        "description": "From jazz to electronic — music fuels my creative process."
+      },
+      "travel": {
+        "title": "World Explorer",
+        "description": "Lived in Brazil and Scotland. Always seeking new perspectives."
+      }
+    }
+  },
   "accessibility": {
     "skipToMain": "Skip to main content"
   },

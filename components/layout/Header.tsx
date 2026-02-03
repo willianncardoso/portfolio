@@ -3,7 +3,7 @@
  * COMPONENTE: Header (Cabeçalho/Navegação)
  * ============================================
  *
- * Cabeçalho fixo com navegação e language switcher.
+ * Cabeçalho fixo com navegação e LinkedIn CTA.
  */
 
 "use client";
@@ -13,8 +13,6 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
-// import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher"; // Temporarily disabled for English-only launch
 import { Link } from "@/i18n/routing";
 import { siteConfig } from "@/content/site-config";
 import { cn } from "@/lib/utils";
@@ -27,9 +25,7 @@ export function Header() {
 
   // Check if a nav item is active (handles locale prefix)
   const isActive = (href: string) => {
-    // Remove hash for comparison
     const path = href.split("#")[0] || "/";
-    // Check if pathname ends with the path (handles /en/, /pt-BR/ prefixes)
     if (path === "/") {
       return pathname === "/" || pathname === "/en" || pathname === "/pt-BR";
     }
@@ -62,12 +58,17 @@ export function Header() {
     >
       <Container>
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary-800 to-accent-600 bg-clip-text text-transparent hover:from-accent-600 hover:to-primary-800 transition-all duration-300"
-          >
-            {siteConfig.name}
+          {/* Logo with accent bar */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-1 h-8 bg-gradient-to-b from-accent-500 to-primary-600 rounded-full" />
+            <div>
+              <span className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-accent-600 transition-colors duration-200">
+                {siteConfig.name}
+              </span>
+              <span className="hidden sm:block text-xs text-gray-500 font-medium -mt-0.5">
+                {siteConfig.title}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -90,7 +91,7 @@ export function Header() {
                   <span
                     className={cn(
                       "absolute bottom-0 left-0 h-0.5 bg-accent-500 transition-all duration-200",
-                      active ? "w-full" : "w-0 group-hover:w-full"
+                      active ? "w-full" : "w-0"
                     )}
                   />
                 </Link>
@@ -100,38 +101,21 @@ export function Header() {
             {/* Separator */}
             <div className="h-6 w-px bg-primary-200" />
 
-            {/* Language Switcher - Temporarily disabled for English-only launch */}
-            {/* <LanguageSwitcher /> */}
-
-            {/* LinkedIn */}
+            {/* LinkedIn CTA */}
             {siteConfig.links.linkedin && (
-              <Button
+              <a
                 href={siteConfig.links.linkedin}
-                external
-                variant="ghost"
-                size="sm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-accent-500 to-primary-600 text-white text-sm font-semibold rounded-lg hover:from-accent-600 hover:to-primary-700 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 {t("linkedin")}
-              </Button>
-            )}
-
-            {/* Resume */}
-            {siteConfig.links.resume && (
-              <Button
-                href={siteConfig.links.resume}
-                external
-                variant="secondary"
-                size="sm"
-              >
-                {t("resume")}
-              </Button>
+              </a>
             )}
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-3 md:hidden">
-            {/* Language Switcher - Temporarily disabled */}
-            {/* <LanguageSwitcher /> */}
             <button
               className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary-700 hover:text-accent-500 hover:bg-accent-50 rounded-lg transition-all duration-200"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -175,28 +159,17 @@ export function Header() {
 
             <div className="border-t border-primary-200 my-4" />
 
-            <div className="space-y-3 px-4">
+            <div className="px-4">
               {siteConfig.links.linkedin && (
-                <Button
+                <a
                   href={siteConfig.links.linkedin}
-                  external
-                  variant="ghost"
-                  fullWidth
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={closeMobileMenu}
+                  className="block w-full text-center px-5 py-3 bg-gradient-to-r from-accent-500 to-primary-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-primary-700 transition-all duration-200"
                 >
                   {t("linkedin")}
-                </Button>
-              )}
-              {siteConfig.links.resume && (
-                <Button
-                  href={siteConfig.links.resume}
-                  external
-                  variant="secondary"
-                  fullWidth
-                  onClick={closeMobileMenu}
-                >
-                  {t("resume")}
-                </Button>
+                </a>
               )}
             </div>
           </nav>

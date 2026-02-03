@@ -70,6 +70,78 @@
     "nextCase": "Próximo Case",
     "previousCase": "Case Anterior"
   },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "A interseção entre design, código e ciência cognitiva.",
+    "intro": "Sou Willian Cardoso, Lead Product Designer com 7+ anos na IBM, onde projetei produtos SaaS enterprise usados por milhares de usuários no mundo todo. Meu background único conecta design, engenharia e neurociência — me dando uma perspectiva que vai além dos pixels.",
+    "journeyTitle": "Minha Trajetória",
+    "journeyItems": {
+      "ibm": {
+        "year": "2017–Presente",
+        "title": "Lead Product Designer na IBM",
+        "description": "Liderando design para produtos B2B SaaS, design systems e dashboards operacionais complexos. Mentorando designers júnior e impulsionando colaboração design-engenharia em times distribuídos."
+      },
+      "scotland": {
+        "year": "2016",
+        "title": "Intercâmbio — University of Strathclyde, Escócia",
+        "description": "Experiência internacional imersiva estudando em uma das principais universidades de engenharia do Reino Unido. Ampliou minha perspectiva sobre colaboração global e comunicação intercultural."
+      },
+      "dev": {
+        "year": "2014–2017",
+        "title": "Começou na Engenharia",
+        "description": "Comecei minha carreira como estagiário de desenvolvimento, escrevendo código e entendendo sistemas por dentro. Essa base em engenharia molda como eu projeto — penso em componentes, APIs e fluxos de dados."
+      }
+    },
+    "skillsTitle": "O Que Eu Trago",
+    "skills": {
+      "enterprise": {
+        "title": "SaaS Enterprise",
+        "description": "Ferramentas de configuração, dashboards, workflows complexos na escala IBM."
+      },
+      "systems": {
+        "title": "Design Systems",
+        "description": "Construção e manutenção de bibliotecas de componentes escaláveis e tokens."
+      },
+      "code": {
+        "title": "Fluência em Código",
+        "description": "Prototipação em Python, leitura de JavaScript/Vue, mentalidade de engenheiro."
+      },
+      "research": {
+        "title": "Pesquisa + Neuro",
+        "description": "Graduação em Neurociência, pesquisa computacional, design baseado em evidências."
+      },
+      "global": {
+        "title": "Times Globais",
+        "description": "Colaboração EUA, LATAM, Europa. Async-first, consciente de fusos."
+      },
+      "data": {
+        "title": "Analytics de Dados",
+        "description": "Pós-graduação em Data Analytics. Decisões de design informadas por métricas."
+      }
+    },
+    "lookingTitle": "O Que Estou Buscando",
+    "lookingDescription": "Estou buscando oportunidades remotas com times de produto que valorizam colaboração design-engenharia. Interessado em vagas de Senior Product Designer, Design Systems Lead ou Service Designer.",
+    "lookingLocations": "Aberto para vagas remotas — EUA, UK, Alemanha, Portugal, NL | Também aberto para CLT no Brasil",
+    "funTitle": "Além do Trabalho",
+    "funItems": {
+      "neuro": {
+        "title": "Estudante de Neurociência",
+        "description": "Estudando como o cérebro toma decisões — e aplicando ao design."
+      },
+      "nlp": {
+        "title": "Pesquisador em NLP",
+        "description": "Usando linguística computacional para ajudar a preservar línguas indígenas."
+      },
+      "music": {
+        "title": "Amante de Música",
+        "description": "De jazz a eletrônica — música alimenta meu processo criativo."
+      },
+      "travel": {
+        "title": "Explorador do Mundo",
+        "description": "Morou no Brasil e na Escócia. Sempre buscando novas perspectivas."
+      }
+    }
+  },
   "accessibility": {
     "skipToMain": "Pular para conteúdo principal"
   },
