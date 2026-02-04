@@ -15,7 +15,6 @@ import {
   Layers,
   MapPin,
   Mail,
-  Music,
   Plane,
   BookOpen,
   MessageSquare,
@@ -77,17 +76,17 @@ const skillColors = {
   data: "from-blue-600 to-indigo-700",
 };
 
-const funKeys = ["neuro", "nlp", "music", "travel"] as const;
+const funKeys = ["neuro", "nlp", "reading", "travel"] as const;
 const funIcons = {
   neuro: BookOpen,
   nlp: MessageSquare,
-  music: Music,
+  reading: BookOpen,
   travel: Plane,
 };
 const funColors = {
   neuro: "from-purple-600 to-violet-700",
   nlp: "from-teal-600 to-cyan-700",
-  music: "from-pink-600 to-rose-700",
+  reading: "from-pink-600 to-rose-700",
   travel: "from-amber-600 to-orange-700",
 };
 
